@@ -7,6 +7,8 @@ import Logo from "./components/Logo";
 import "./index.css";
 import HomePage from './pages/HomePage';
 import ContactUs from './pages/ContactUs';
+import BookAppointment from './pages/BookAppointment';
+import PatientForms from './pages/PatientForms';
 
 export default function RootLayout({
   children,
@@ -25,6 +27,8 @@ export default function RootLayout({
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/book-appointment" element={<BookAppointment />} />
+              <Route path="/patient-forms" element={<PatientForms />} />
             </Routes>
           </ThemeProvider>
         </Router>

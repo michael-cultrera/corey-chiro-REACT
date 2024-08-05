@@ -46,7 +46,7 @@ export default function Navbar() {
           About Us
         </Link>
         <Link
-          href="#"
+          href="/patient-forms"
           sx={{
             color: "var(--foreground-color)",
             textDecoration: "none",
@@ -61,16 +61,16 @@ export default function Navbar() {
             textDecoration: "none",
           }}
         >
-          Contact Us
+          Contact
         </Link>
         <Link
-          href="#"
+          href="/book-appointment"
           sx={{
             color: "var(--foreground-color)",
             textDecoration: "none",
           }}
         >
-          Hours
+          Book An Appointment
         </Link>
       </Box>
     </Box>

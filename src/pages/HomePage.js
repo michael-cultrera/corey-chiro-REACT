@@ -4,6 +4,13 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Button from "@mui/material/Button";
+import Carousel from "../components/Carousel";
+
+const images = [
+    { src: '../../images/placeholder1.jpg', alt: 'Slide 1' },
+    { src: '../../images/placeholder2.jpg', alt: 'Slide 2' },
+    { src: '../../images/placeholder3.jpg', alt: 'Slide 3' },
+  ];
 
 const handleScroll = () => {
   const targetElement = document.getElementById("intro-corey");
@@ -17,13 +24,12 @@ export default function Home() {
     <Box
     sx={{
         px: 5,
+        py: 5,
       }}>
-      <p className="text-7xl text-center pt-20">Dr. Corey Cultrera</p>
-      <p className="text-2xl text-center pt-5">Network Spinal Analysis</p>
-
+      <Carousel images={images} />
       <Box
         sx={{
-          pt: 40,
+          pt: 20,
           width: "100%",
           textAlign: "center",
         }}
@@ -59,7 +65,7 @@ export default function Home() {
           sx={{
             display: 'block',
             margin: 'auto',
-            width: {xs: '300px', },
+            width: {xs: '200px', md: '250px'},
             height: 'auto',
             objectFit: 'contain'
           }}
