@@ -1,7 +1,7 @@
-import React from 'react';
-import { Box } from '@mui/material';
-import MapBoxMap from '../components/MapBoxMap';
-import GetInTouch from '../components/GetInTouch';
+import React from "react";
+import { Box } from "@mui/material";
+import MapBoxMap from "../components/MapBoxMap";
+import GetInTouch from "../components/GetInTouch";
 
 export default function ContactUs() {
   return (
@@ -19,8 +19,8 @@ export default function ContactUs() {
       <Box
         sx={{
           pt: 5,
-          display: { xs: 'block', md: 'flex' },
-          justifyContent: 'space-around',
+          display: { xs: "block", md: "flex" },
+          justifyContent: "space-around",
         }}
       >
         <Box>
@@ -30,16 +30,29 @@ export default function ContactUs() {
           <p className="pb-2">Sunday: Closed</p>
         </Box>
         <Box
-        sx={{
+          sx={{
             pt: { xs: 5, md: 0 },
-        }}>
+          }}
+        >
           <p className="text-2xl font-bold">Contact Info</p>
-          <p className="pt-5 pb-2">Phone: <a href="tel:416-497-8585" style={{ color: 'var(--link-color)' }}>416-497-8585</a></p>
-          <p>Email: <a href="mailto:corey.cultrera@gmail.com" style={{ color: 'var(--link-color)' }}>corey.cultrera@gmail.com</a></p>
+          <p className="pt-5 pb-2">
+            Phone:{" "}
+            <a href="tel:416-497-8585" style={{ color: "var(--link-color)" }}>
+              416-497-8585
+            </a>
+          </p>
+          <p>
+            Email:{" "}
+            <a
+              href="mailto:corey.cultrera@gmail.com"
+              style={{ color: "var(--link-color)" }}
+            >
+              dr.coreycultrera@gmail.com
+            </a>
+          </p>
         </Box>
       </Box>
       <GetInTouch />
     </Box>
   );
 }
-

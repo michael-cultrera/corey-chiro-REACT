@@ -2,7 +2,6 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 
-
 export default function Navbar() {
   return (
     <Box
@@ -11,19 +10,19 @@ export default function Navbar() {
         justifyContent: "center",
         display: "flex",
         width: "100%",
-        height: {xs: 50, md: 70},
+        height: { xs: 50, md: 70 },
         bgcolor: "var(--navbar-color)",
       }}
     >
       <Box
         sx={{
           display: "flex",
-          justifyContent: {xs: "space-evenly", md:"flex-end"},
+          justifyContent: { xs: "space-evenly", md: "flex-end" },
           alignItems: "center",
           width: "100%",
-          gap: {md: 4},
-          pr: {md: 4},
-          fontSize: {xs:'14px', md:'20px',},
+          gap: { md: 4 },
+          pr: { md: 4 },
+          fontSize: { xs: "14px", md: "20px" },
         }}
       >
         <Link
@@ -37,7 +36,7 @@ export default function Navbar() {
           Home
         </Link>
         <Link
-          href="/about-us"
+          href="/about"
           sx={{
             color: "var(--foreground-color)",
             textDecoration: "none",

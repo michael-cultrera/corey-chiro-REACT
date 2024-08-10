@@ -1,6 +1,6 @@
 "use client";
 
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   breakpoints: {
@@ -10,7 +10,7 @@ const theme = createTheme({
       md: 768,
       lg: 1024,
       xl: 1280,
-      xxl: 1536
+      xxl: 1536,
     },
   },
 });

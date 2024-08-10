@@ -7,10 +7,10 @@ import Button from "@mui/material/Button";
 import Carousel from "../components/Carousel";
 
 const images = [
-    { src: '../../images/placeholder1.jpg', alt: 'Slide 1' },
-    { src: '../../images/placeholder2.jpg', alt: 'Slide 2' },
-    { src: '../../images/placeholder3.jpg', alt: 'Slide 3' },
-  ];
+  { src: "../../images/placeholder1.jpg", alt: "Slide 1" },
+  { src: "../../images/placeholder2.jpg", alt: "Slide 2" },
+  { src: "../../images/placeholder3.jpg", alt: "Slide 3" },
+];
 
 const handleScroll = () => {
   const targetElement = document.getElementById("intro-corey");
@@ -22,10 +22,11 @@ const handleScroll = () => {
 export default function Home() {
   return (
     <Box
-    sx={{
+      sx={{
         px: 5,
         py: 5,
-      }}>
+      }}
+    >
       <Carousel images={images} />
       <Box
         sx={{
@@ -53,7 +54,7 @@ export default function Home() {
           pt: 10,
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          width: '100%',
+          width: "100%",
           position: "relative",
           gap: { xs: 4, md: 6 },
         }}
@@ -63,11 +64,11 @@ export default function Home() {
           src="/images/corey_img.jpeg"
           alt="Corey Cultrera"
           sx={{
-            display: 'block',
-            margin: 'auto',
-            width: {xs: '200px', md: '250px'},
-            height: 'auto',
-            objectFit: 'contain'
+            display: "block",
+            margin: "auto",
+            width: { xs: "200px", md: "250px" },
+            height: "auto",
+            objectFit: "contain",
           }}
         />
         <p>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 
-export default function PatientForms() {
+export default function About() {
   return (
     <Box
       sx={{
@@ -9,7 +9,7 @@ export default function PatientForms() {
         py: 5,
       }}
     >
-      <p className="text-2xl font-bold">New Patient Forms</p>
+      <p className="text-2xl font-bold">What is Network Spinal Analysis?</p>
     </Box>
   );
 }
