@@ -25,6 +25,7 @@ export default function Home() {
       sx={{
         px: 5,
         py: 5,
+        fontSize: {xs: "14px", md: "20px",},
       }}
     >
       <Carousel images={images} />
@@ -42,9 +43,10 @@ export default function Home() {
             textTransform: "none",
             color: "var(--foreground-color)",
             fontFamily: "var(--urbanist-font)",
+            fontSize: {xs: "14px", md: "20px"},
           }}
         >
-          <p className="text-xl text-center">Learn More</p>
+          <p>Learn More</p>
           <KeyboardArrowDownIcon />
         </Button>
       </Box>
