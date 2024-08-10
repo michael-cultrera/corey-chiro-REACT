@@ -43,7 +43,7 @@ export default function Navbar() {
             textDecoration: "none",
           }}
         >
-          About Us
+          About
         </Link>
         <Link
           href="/patient-forms"
