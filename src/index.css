@@ -20,7 +20,6 @@
 body {
   color: var(--foreground-color);
   background: var(--background-color);
-  font-family: "Urbanist", sans-serif;
 }
 
 @layer utilities {

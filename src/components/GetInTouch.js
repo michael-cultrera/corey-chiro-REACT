@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, TextField, Button } from "@mui/material";
+import { Box, TextField, Button, Typography } from "@mui/material";
 
 const GetInTouch = () => {
   const handleSubmit = (event) => {
@@ -13,7 +13,7 @@ const GetInTouch = () => {
         pt: 5,
       }}
     >
-      <p className="text-2xl font-bold text-center">Get In Touch</p>
+      <Typography variant="header" sx={{ textAlign: "center" }}>Get In Touch</Typography>
       <form
         onSubmit={handleSubmit}
         style={{
@@ -28,12 +28,6 @@ const GetInTouch = () => {
           required
           sx={{
             width: "350px",
-            "& .MuiInputBase-input": {
-              fontFamily: "var(--font-family)",
-            },
-            "& .MuiInputLabel-root": {
-              fontFamily: "var(--font-family)",
-            },
           }}
         />
         <TextField
@@ -43,12 +37,6 @@ const GetInTouch = () => {
           required
           sx={{
             width: "350px",
-            "& .MuiInputBase-input": {
-              fontFamily: "var(--font-family)",
-            },
-            "& .MuiInputLabel-root": {
-              fontFamily: "var(--font-family)",
-            },
           }}
         />
         <TextField
@@ -59,12 +47,6 @@ const GetInTouch = () => {
           required
           sx={{
             width: "350px",
-            "& .MuiInputBase-input": {
-              fontFamily: "var(--font-family)",
-            },
-            "& .MuiInputLabel-root": {
-              fontFamily: "var(--font-family)",
-            },
           }}
         />
         <Button
@@ -73,7 +55,6 @@ const GetInTouch = () => {
           sx={{
             backgroundColor: "var(--link-color)",
             "&:hover": { backgroundColor: "var(--link-color)", opacity: 0.8 },
-            fontFamily: "var(--font-family)",
           }}
         >
           Send Message

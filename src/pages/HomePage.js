@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from "react";
-import Box from "@mui/material/Box";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Button from "@mui/material/Button";
+import { Button, Box, Typography } from "@mui/material";
 import Carousel from "../components/Carousel";
 
 const images = [
@@ -21,68 +20,69 @@ const handleScroll = () => {
 
 export default function Home() {
   return (
-    <Box
-      sx={{
-        px: 5,
-        py: 5,
-        fontSize: {xs: "14px", md: "20px",},
-      }}
-    >
-      <Carousel images={images} />
+    <Typography>
       <Box
         sx={{
-          pt: 20,
-          width: "100%",
-          textAlign: "center",
+          px: 5,
+          py: 5,
         }}
       >
-        <Button
-          onClick={handleScroll}
+        <Carousel images={images} />
+        <Box
           sx={{
-            flexDirection: "column",
-            textTransform: "none",
-            color: "var(--foreground-color)",
-            fontFamily: "var(--urbanist-font)",
-            fontSize: {xs: "14px", md: "20px"},
+            pt: 20,
+            width: "100%",
+            textAlign: "center",
           }}
         >
-          <p>Learn More</p>
-          <KeyboardArrowDownIcon />
-        </Button>
-      </Box>
-      <Box
-        id="intro-corey"
-        sx={{
-          pt: 10,
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          width: "100%",
-          position: "relative",
-          gap: { xs: 4, md: 6 },
-        }}
-      >
+          <Button
+            onClick={handleScroll}
+            sx={{
+              flexDirection: "column",
+              textTransform: "none",
+              color: "var(--foreground-color)",
+              fontFamily: "var(--urbanist-font)",
+              fontSize: { xs: "14px", md: "20px", lg: "22px" },
+            }}
+          >
+            <Typography variant="body">Learn More</Typography>
+            <KeyboardArrowDownIcon />
+          </Button>
+        </Box>
         <Box
-          component="img"
-          src="/images/corey_img.jpeg"
-          alt="Corey Cultrera"
+          id="intro-corey"
           sx={{
-            display: "block",
-            margin: "auto",
-            width: { xs: "200px", md: "250px" },
-            height: "auto",
-            objectFit: "contain",
+            pt: 10,
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            width: "100%",
+            position: "relative",
+            gap: { xs: 4, md: 6 },
           }}
-        />
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, quae
-          necessitatibus! Omnis, laudantium. Delectus numquam at obcaecati, amet
-          animi enim fuga tempora autem beatae nam voluptate ut provident
-          excepturi eos! Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Ducimus saepe eligendi unde iste pariatur ratione similique non
-          doloribus, minima expedita accusantium eveniet atque rerum magni, illo
-          recusandae labore obcaecati vel.
-        </p>
+        >
+          <Box
+            component="img"
+            src="/images/corey_img.jpeg"
+            alt="Corey Cultrera"
+            sx={{
+              display: "block",
+              margin: "auto",
+              width: { xs: "150px", sm: "180px", md: "250px" },
+              height: "auto",
+              objectFit: "contain",
+            }}
+          />
+          <Typography variant="body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, quae
+            necessitatibus! Omnis, laudantium. Delectus numquam at obcaecati, amet
+            animi enim fuga tempora autem beatae nam voluptate ut provident
+            excepturi eos! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Ducimus saepe eligendi unde iste pariatur ratione similique non
+            doloribus, minima expedita accusantium eveniet atque rerum magni, illo
+            recusandae labore obcaecati vel.
+          </Typography>
+        </Box>
       </Box>
-    </Box>
+    </Typography>
   );
 }
