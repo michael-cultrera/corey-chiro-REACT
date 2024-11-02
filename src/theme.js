@@ -18,42 +18,12 @@ const theme = createTheme({
   typography: {
     fontFamily: "Urbanist, sans-serif",
     header: {
-      fontWeight: 700,
-      fontSize: "1.2rem",
       paddingBottom: "1rem",
-      [`@media (min-width:${breakpoints.values['sm']}px)`]: {
-        fontSize: "1.3rem",
-      },
-      [`@media (min-width:${breakpoints.values['md']}px)`]: {
-        fontSize: "1.4rem",
-      },
-      [`@media (min-width:${breakpoints.values['lg']}px)`]: {
-        fontSize: "1.5rem",
-      },
-      [`@media (min-width:${breakpoints.values['xl']}px)`]: {
-        fontSize: "1.8rem",
-      },
-      [`@media (min-width:${breakpoints.values['2xl']}px)`]: {
-        fontSize: "2rem",
-      },
+      fontWeight: 700,
+      fontSize: "1.3rem",
     },
     body: {
-      fontSize: "0.9rem",
-      [`@media (min-width:${breakpoints.values['sm']}px)`]: {
-        fontSize: "1rem",
-      },
-      [`@media (min-width:${breakpoints.values['md']}px)`]: {
-        fontSize: "1.1rem",
-      },
-      [`@media (min-width:${breakpoints.values['lg']}px)`]: {
-        fontSize: "1.3rem",
-      },
-      [`@media (min-width:${breakpoints.values['xl']}px)`]: {
-        fontSize: "1.6rem",
-      },
-      [`@media (min-width:${breakpoints.values['2xl']}px)`]: {
-        fontSize: "1.8rem",
-      },
+      fontSize: "1rem",
     }
   },
   components: {
@@ -65,6 +35,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          maxWidth: `${breakpoints.values['2xl']}px !important`,
+          padding: "45px",
+        }
+      }
+    }
   },
 });
 

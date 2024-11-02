@@ -1,17 +1,12 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 
 export default function PatientForms() {
   return (
-    <Typography>
-      <Box
-        sx={{
-          px: 5,
-          py: 5,
-        }}
-      >
-        <Typography variant="header">New Patient Forms</Typography>
-      </Box>
-    </Typography>
+    <Container>
+      <Typography>
+        <Typography variant="header">New Patient Forms</Typography> 
+      </Typography>
+    </Container>
   );
 }

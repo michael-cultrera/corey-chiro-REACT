@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { Button, Box, Typography } from "@mui/material";
+import { Button, Box, Typography, Container } from "@mui/material";
 import Carousel from "../components/Carousel";
 
 const images = [
@@ -19,15 +19,11 @@ const handleScroll = () => {
 };
 
 export default function Home() {
+
   return (
-    <Typography>
-      <Box
-        sx={{
-          px: 5,
-          py: 5,
-        }}
-      >
-        <Carousel images={images} />
+    <Container>
+      <Typography>
+        <Carousel images={images} width={"700px"} />
         <Box
           sx={{
             pt: 20,
@@ -67,7 +63,7 @@ export default function Home() {
             sx={{
               display: "block",
               margin: "auto",
-              width: { xs: "150px", sm: "180px", md: "250px" },
+              width: {xs: "150px", lg: "220px"},
               height: "auto",
               objectFit: "contain",
             }}
@@ -82,7 +78,7 @@ export default function Home() {
             recusandae labore obcaecati vel.
           </Typography>
         </Box>
-      </Box>
-    </Typography>
+      </Typography>
+    </Container>
   );
 }

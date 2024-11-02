@@ -1,15 +1,10 @@
 import * as React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 
 export default function BookAppointment() {
   return (
-    <Typography>
-      <Box
-        sx={{
-          px: 5,
-          py: 5,
-        }}
-      >
+    <Container>
+      <Typography>
         <Typography variant="header">Book An Appointment</Typography>
         <Typography variant="body">
           To book an initial exam/appointment with Dr. Corey Cultrera please call{" "}
@@ -58,7 +53,7 @@ export default function BookAppointment() {
             </Typography>
           </Box>
         </Box>
-      </Box>
-    </Typography>
+      </Typography>
+    </Container>
   );
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box } from "@mui/material";
 
-export default function Logo() {
+export default function Logo(width) {
   return (
     <Box>
       <a href="/">
@@ -10,14 +10,7 @@ export default function Logo() {
           src="/images/corey_logo.png"
           alt="Dr. Corey Cultrera"
           sx={{
-            position: "relative",
-            display: "block",
-            margin: "auto",
-            padding: "20px",
-            width: {
-              xs: "160px",
-              md: "200px",
-            },
+            width: width,
             objectFit: "contain",
           }}
         />

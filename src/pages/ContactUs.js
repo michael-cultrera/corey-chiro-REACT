@@ -1,17 +1,12 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import MapBoxMap from "../components/MapBoxMap";
 import GetInTouch from "../components/GetInTouch";
 
 export default function ContactUs() {
   return (
-    <Typography>
-      <Box
-        sx={{
-          px: 5,
-          py: 5,
-        }}
-      >
+    <Container>
+      <Typography>
         <Typography variant="header">Location</Typography>
         <Typography variant="body">68 Shaughnessy Blvd, North York, ON M2J 1J3</Typography>
         <MapBoxMap />
@@ -48,7 +43,7 @@ export default function ContactUs() {
           </Box>
         </Box>
         <GetInTouch />
-      </Box>
-    </Typography>
+      </Typography>
+    </Container>
   );
 }

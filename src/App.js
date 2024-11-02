@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body>
         <Router>
           <ThemeProvider theme={theme}>
-            <Logo />
+          <Logo width={"160px"}/>
             <Navbar />
             {children}
             <Routes>

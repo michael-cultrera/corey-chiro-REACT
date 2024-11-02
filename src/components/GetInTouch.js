@@ -8,11 +8,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <Box
-      sx={{
-        pt: 5,
-      }}
-    >
+    <Box>
       <Typography variant="header" sx={{ textAlign: "center" }}>Get In Touch</Typography>
       <form
         onSubmit={handleSubmit}
@@ -26,18 +22,12 @@ const GetInTouch = () => {
           label="Name"
           margin="normal"
           required
-          sx={{
-            width: "350px",
-          }}
         />
         <TextField
           label="Email"
           type="email"
           margin="normal"
           required
-          sx={{
-            width: "350px",
-          }}
         />
         <TextField
           label="Message"
@@ -45,9 +35,6 @@ const GetInTouch = () => {
           rows={4}
           margin="normal"
           required
-          sx={{
-            width: "350px",
-          }}
         />
         <Button
           type="submit"

@@ -35,7 +35,7 @@ export default function Navbar() {
           display: "flex",
           flexDirection: "column",
           width: "100%",
-          height: menuOpen ? { xs: 200, md: 70 } : { xs: 40, md: 70 },
+          height: menuOpen ? 200 : 60,
           bgcolor: "var(--navbar-color)",
         }}
       >
