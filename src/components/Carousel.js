@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default function Carousel({ images, width }) {
+export default function Carousel({ images }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -18,12 +18,15 @@ export default function Carousel({ images, width }) {
   return (
     <Slider {...settings}>
       {images.map((image, index) => (
-        <Box key={index}>
+        <Box 
+          key={index}
+          sx={{ height: 450 }}
+        >
+          {/* Placeholder images */}
           <img
             src={image.src}
             alt={image.alt}
             style={{
-              width: width,
               display: "block",
               margin: "0 auto",
             }}

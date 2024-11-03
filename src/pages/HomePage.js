@@ -1,15 +1,7 @@
 "use client";
 
 import * as React from "react";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Button, Box, Typography, Container } from "@mui/material";
-import Carousel from "../components/Carousel";
-
-const images = [
-  { src: "../../images/placeholder1.jpg", alt: "Slide 1" },
-  { src: "../../images/placeholder2.jpg", alt: "Slide 2" },
-  { src: "../../images/placeholder3.jpg", alt: "Slide 3" },
-];
 
 const handleScroll = () => {
   const targetElement = document.getElementById("intro-corey");
@@ -21,31 +13,21 @@ const handleScroll = () => {
 export default function Home() {
 
   return (
-    <Container>
-      <Typography>
-        <Carousel images={images} width={"700px"} />
-        <Box
-          sx={{
-            pt: 20,
-            width: "100%",
-            textAlign: "center",
-          }}
-        >
-          <Button
-            onClick={handleScroll}
-            sx={{
-              flexDirection: "column",
-              textTransform: "none",
-              color: "var(--foreground-color)",
-              fontFamily: "var(--urbanist-font)",
-              fontSize: { xs: "14px", md: "20px", lg: "22px" },
-            }}
-          >
-            <Typography variant="body">Learn More</Typography>
-            <KeyboardArrowDownIcon />
-          </Button>
-        </Box>
-        <Box
+    <Typography>
+      <Box
+        component="img"
+        src="/images/home_page_photo.jpg"
+        alt="Welcome!"
+        sx={{
+          height: 500,
+          width: "100%",
+          objectFit: "cover",
+          opacity: 0.8,
+          filter: "brightness(0.9)",
+        }}
+      />
+      <Container>
+        {/* <Box
           id="intro-corey"
           sx={{
             pt: 10,
@@ -77,8 +59,32 @@ export default function Home() {
             doloribus, minima expedita accusantium eveniet atque rerum magni, illo
             recusandae labore obcaecati vel.
           </Typography>
-        </Box>
+        </Box> */}
+        <Box
+          sx={{
+            pt: 20,
+            width: "100%",
+            textAlign: "center",
+          }}
+        >
+        <Button
+            onClick={handleScroll}
+            variant="outlined"
+            sx={{
+              flexDirection: "column",
+              textTransform: "none",
+              color: "var(--foreground-color)",
+              borderRadius: "25px",
+              borderColor: "var(--foreground-color)",
+              '&:hover': {
+                borderColor: "var(--foreground-color)",
+              }
+            }}
+          >
+            <Typography variant="body">Learn More</Typography>
+          </Button>
+          </Box>
+        </Container>
       </Typography>
-    </Container>
   );
 }

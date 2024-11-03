@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
+import {Box} from "@mui/material";
 import theme from "./theme";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
       <body>
         <Router>
           <ThemeProvider theme={theme}>
-          <Logo width={"160px"}/>
+          <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Logo width={"160px"}/>
+          </Box>
             <Navbar />
             {children}
             <Routes>
