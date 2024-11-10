@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 :root {
+  /* Have to delete these 4 */
   --navbar-color: #32a287;
   --foreground-color: black;
   --background-color: #f1ffe7;
   --link-color: #32a287;
+
+  
+  --honeydew: #f1ffe7;
+  --light-green: #a9fdac;
+  --green: #44CF6C;
+  --dark-green: #32a287;
 }
 
 /* @media (prefers-color-scheme: dark) {
