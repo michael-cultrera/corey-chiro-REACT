@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  /* Have to delete these 4 */
+  /* Have to delete these 4, first get rid of their references in the code, change to bottom ones */
   --navbar-color: #32a287;
   --foreground-color: black;
   --background-color: #f1ffe7;
   --link-color: #32a287;
 
-  
+
   --honeydew: #f1ffe7;
   --light-green: #a9fdac;
   --green: #44CF6C;

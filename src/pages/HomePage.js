@@ -1,10 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { Button, Box, Typography, Container, Grid, Card, CardContent, CardMedia } from "@mui/material";
+import { Button, Box, Typography, Container, Grid } from "@mui/material";
+import ImageCard from "../components/ImageCard"; 
 
 const handleScroll = () => {
-  const targetElement = document.getElementById("intro-corey");
+  const targetElement = document.getElementById("techniques-used");
   if (targetElement) {
     targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }
@@ -65,8 +66,8 @@ export default function Home() {
               borderColor: "black",
               width: "180px",
               '&:hover': {
-                borderColor: "var(--dark-green)",
-                backgroundColor: "var(--dark-green)",
+                borderColor: "black",
+                backgroundColor: "black",
                 color: "var(--honeydew)"
               }
             }}
@@ -76,66 +77,49 @@ export default function Home() {
         </Box>
       </Box>
       <Container>
-        <Typography variant="header">
+        <Typography variant="header" id="techniques-used">
           Techniques Used
         </Typography>
-        <Grid container spacing={4}>
-          <Grid item xs={12} sm={6}>
-            <Card sx={{ height: '250px', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--light-green)' }}>
-              <CardMedia
-                sx={{ height: 140 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="green iguana"
-              >
-              </CardMedia>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Network Spinal Analysis
-                </Typography>
-                <Typography variant="body">
-                This is a gentle technique that uses light contacts along the spine. These specific light touches send a message up to the brain and back down to the body. The body begins to further communicate to reconfigure itself and learn how to release built up tension within the spinal cord, nerves, muscles and tendons. Release of tension during treatment can be experienced as a deep breath, total body relaxation, muscle movement, as well as a build up or release of tension in other areas.
-                </Typography>
-              </CardContent>
-            </Card>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={4}>
+            <ImageCard 
+              image="images/sample1.jpeg"
+              title="Network Spinal Analysis"
+              description="This gentle technique uses light touches along the spine to send signals to the brain, helping the body release built-up tension in the spinal cord, nerves, muscles, and tendons. Patients may feel relaxed, experience deep breaths, muscle movement, or shifts in tension."
+            />
           </Grid>
-          {/* <Grid item xs={12} sm={6}>
-            <Card sx={{ height: '250px', display: 'flex', flexDirection: 'column' }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Thompson Technique
-                </Typography>
-                <Typography variant="body">
-                  A technique using a special drop table that helps facilitate the adjustment and makes it more comfortable for patients.
-                </Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={12} sm={6} md={4}>
+            <ImageCard 
+              image="images/sample1.jpeg"
+              title="Neuromechanical Impulse Mechanical Adjusting"
+              description="This technique uses a device to deliver precise thrusts to restricted joints, improving mobility and reducing pain caused by tension and poor body mechanics."
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <ImageCard 
+              image="images/sample1.jpeg"
+              title="Myofascial Release"
+              description="Myofascial Release relieves tight muscles through patient movements and practitioner guidance, similar to deep tissue massage but more targeted. Gua Sha tools may also be used to release muscle adhesions and realign tissues."
+            />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Activator Method
-                </Typography>
-                <Typography variant="body">
-                  A gentle, low-force approach that uses a small, hand-held instrument to deliver precise adjustments to the vertebrae and joints.
-                </Typography>
-              </CardContent>
-            </Card>
+            <ImageCard 
+              image="images/sample1.jpeg"
+              title="Therapeutic Ultrasound"
+              description="Therapeutic ultrasound uses sound waves to break down scar tissue from injuries or strain. The vibrations create heat, boosting blood flow and aiding the body’s natural healing process."
+            />
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <CardContent>
-                <Typography variant="h6" gutterBottom>
-                  Soft Tissue Therapy
-                </Typography>
-                <Typography variant="body">
-                  Manual therapy techniques applied to muscles, tendons and ligaments to reduce pain, improve mobility and promote healing.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid> */}
+          <Grid item xs={12} md={6}>
+            <ImageCard 
+              image="images/sample1.jpeg"
+              title="Exercise Prescription"
+              description="Exercise prescriptions help maintain alignment and stability after releasing tension, ensuring muscles fire correctly for efficient movement."
+            />
+          </Grid>
+          {/* Try to add 1 more to make it even number */}
         </Grid>
       </Container>
     </Typography>
   );
 }
+

@@ -20,7 +20,7 @@ const theme = createTheme({
     header: {
       paddingBottom: "1rem",
       fontWeight: 700,
-      fontSize: "1.3rem",
+      fontSize: "2rem",
     },
     body: {
       fontSize: "1rem",
