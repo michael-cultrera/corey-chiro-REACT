@@ -24,14 +24,19 @@ const theme = createTheme({
     },
     body: {
       fontSize: "1rem",
-    }
+    },
+    body_light: {
+      fontSize: "1rem",
+      color: "rgba(0, 0, 0, 0.6)",
+    },
   },
   components: {
     MuiTypography: {
       defaultProps: {
         variantMapping: {
           header: "h1",
-          body: "p"
+          body: "p",
+          body_light: "p",
         },
       },
     },

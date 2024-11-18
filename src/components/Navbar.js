@@ -68,6 +68,10 @@ export default function Navbar() {
               sx={{
                 color: "var(--foreground-color)",
                 textDecoration: "none",
+                transition: "color 0.3s ease",
+                '&:hover': {
+                  color: "var(--honeydew)"
+                }
               }}
             >
               <Typography variant="body">Home</Typography>
@@ -75,8 +79,12 @@ export default function Navbar() {
             <Link
               href="/about"
               sx={{
-                color: "var(--foreground-color)",
+                color: "var(--foreground-color)", 
                 textDecoration: "none",
+                transition: "color 0.3s ease",
+                '&:hover': {
+                  color: "var(--honeydew)"
+                }
               }}
             >
               <Typography variant="body">About</Typography>
@@ -86,27 +94,46 @@ export default function Navbar() {
               sx={{
                 color: "var(--foreground-color)",
                 textDecoration: "none",
+                transition: "color 0.3s ease",
+                '&:hover': {
+                  color: "var(--honeydew)"
+                }
               }}
             >
               <Typography variant="body">Patient Forms</Typography>
-            </Link>
-            <Link
-              href="/contact-us"
-              sx={{
-                color: "var(--foreground-color)",
-                textDecoration: "none",
-              }}
-            >
-              <Typography variant="body">Contact</Typography>
             </Link>
             <Link
               href="/book-appointment"
               sx={{
                 color: "var(--foreground-color)",
                 textDecoration: "none",
+                transition: "color 0.3s ease",
+                '&:hover': {
+                  color: "var(--honeydew)"
+                }
               }}
             >
               <Typography variant="body">Book An Appointment</Typography>
+            </Link>
+            <Link
+              href="/contact-us"
+              sx={{
+                color: "black",
+                borderRadius: "10px",
+                border: "1px solid black",
+                width: "100px",
+                textDecoration: "none",
+                textAlign: "center",
+                padding: "6px 16px",
+                transition: "background-color 0.3s ease, color 0.3s ease",
+                '&:hover': {
+                  borderColor: "black",
+                  backgroundColor: "black", 
+                  color: "var(--dark-green)"
+                }
+              }}
+            >
+              <Typography variant="body">Contact</Typography>
             </Link>
           </Box>
         )}

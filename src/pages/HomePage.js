@@ -24,7 +24,7 @@ export default function Home() {
           src="/images/home_page_photo.jpg"
           alt="Home Page Image"
           sx={{
-            height: "600px",
+            height: "550px",
             width: "100%",
             objectFit: "cover",
             opacity: 0.8,
@@ -52,7 +52,7 @@ export default function Home() {
           sx={{
             width: "100%",
             textAlign: "center",
-            pt: "50px"
+            pt: "10px"
           }}
         >
           <Button
@@ -65,6 +65,7 @@ export default function Home() {
               borderRadius: "10px",
               borderColor: "black",
               width: "180px",
+              transition: "background-color 0.3s ease, color 0.3s ease",
               '&:hover': {
                 borderColor: "black",
                 backgroundColor: "black",
@@ -77,7 +78,7 @@ export default function Home() {
         </Box>
       </Box>
       <Container>
-        <Typography variant="header" id="techniques-used">
+        <Typography variant="header" id="techniques-used" sx={{pt:"20px"}}>
           Techniques Used
         </Typography>
         <Grid container spacing={2}>
@@ -118,6 +119,10 @@ export default function Home() {
           </Grid>
           {/* Try to add 1 more to make it even number */}
         </Grid>
+        <Typography variant="header" sx={{pt:"200px"}}>
+          Benefits of Care
+        </Typography>
+
       </Container>
     </Typography>
   );

@@ -17,7 +17,7 @@ export default function ImageCard({ image, title, description }) {
         <Typography variant="h6" gutterBottom>
           <strong>{title}</strong>
         </Typography>
-        <Typography variant="body">
+        <Typography variant="body_light">
           {description}
         </Typography>
       </CardContent>
