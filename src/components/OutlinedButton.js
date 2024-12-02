@@ -12,7 +12,6 @@ export default function OutlinedButton({ buttonText, onClick }) {
             color: "black",
             borderRadius: "10px",
             borderColor: "black",
-            width: "180px",
             transition: "background-color 0.3s ease, color 0.3s ease",
             '&:hover': {
             borderColor: "black",

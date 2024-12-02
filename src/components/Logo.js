@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 export default function Logo(width) {
   return (
     <Box>
-      <a href="/">
+      <a href="/" style={{ display: 'flex', width: 'fit-content' }}>
         <Box
           component="img"
           src="/images/corey_logo.png"
