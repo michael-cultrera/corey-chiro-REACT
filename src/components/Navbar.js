@@ -125,7 +125,7 @@ export default function Navbar() {
             >
               <Typography variant="body">Book An Appointment</Typography>
             </Link>
-            <OutlinedButton buttonText={"Contact"}/>
+            <OutlinedButton buttonText={"Contact"} onClick={() => window.location.href = "/contact-us"}/>
           </Box>
         )}
       </Box>

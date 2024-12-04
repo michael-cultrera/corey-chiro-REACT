@@ -32,9 +32,12 @@ export default function RootLayout({ children }) {
             py: 2,
             gap: 2,
           }}>
-              <OutlinedButton buttonText={<><CalendarMonthIcon sx={{mr: 1}}/>Book Appointment</>}/>
-              <OutlinedButton buttonText={<><CallIcon sx={{mr: 1}}/>(416)-497-8585</>}/>
-              <OutlinedButton buttonText={<><EmailIcon sx={{mr: 1}}/>Email Us</>}/>
+              <OutlinedButton buttonText={<><CalendarMonthIcon sx={{mr: 1}}/>Book Appointment</>} 
+                onClick={() => window.location.href = '/book-appointment'}/>
+              <OutlinedButton buttonText={<><CallIcon sx={{mr: 1}}/>(416)-497-8585</>} 
+                onClick={() => window.location.href = 'tel:4164978585'}/>
+              <OutlinedButton buttonText={<><EmailIcon sx={{mr: 1}}/>Email Us</>} 
+                onClick={() => window.location.href = 'mailto:dr.coreycultrera@gmail.com'}/>
             </Box>
             <Navbar />
             {children}
