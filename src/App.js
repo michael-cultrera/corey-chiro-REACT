@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
-import { Box} from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import theme from "./theme";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
@@ -14,6 +14,7 @@ import About from "./pages/About";
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import LinkWithIcon from "./components/LinkWithIcon";
 
 export default function RootLayout({ children }) {
   return (
@@ -24,21 +25,38 @@ export default function RootLayout({ children }) {
       <body>
         <Router>
           <ThemeProvider theme={theme}>
-          <Box sx={{ 
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100%',
-            py: 2,
-            gap: 2,
-          }}>
-              <OutlinedButton buttonText={<><CalendarMonthIcon sx={{mr: 1}}/>Book Appointment</>} 
-                onClick={() => window.location.href = '/book-appointment'}/>
-              <OutlinedButton buttonText={<><CallIcon sx={{mr: 1}}/>(416)-497-8585</>} 
-                onClick={() => window.location.href = 'tel:4164978585'}/>
-              <OutlinedButton buttonText={<><EmailIcon sx={{mr: 1}}/>Email Us</>} 
-                onClick={() => window.location.href = 'mailto:dr.coreycultrera@gmail.com'}/>
-            </Box>
+            <Typography>
+              <Box sx={{ 
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '100%',
+                py: 2,
+                gap: 4,
+              }}>
+                <LinkWithIcon 
+                  href="/book-appointment" 
+                  color="var(--foreground-color)" 
+                  hoverColor="var(--dark-green)" 
+                  icon={<CalendarMonthIcon/>} 
+                  linkText="Book An Appointment" 
+                />
+                <LinkWithIcon 
+                  href="tel:4164978585" 
+                  color="var(--foreground-color)" 
+                  hoverColor="var(--dark-green)" 
+                  icon={<CallIcon/>} 
+                  linkText="(416)-497-8585" 
+                />
+                <LinkWithIcon 
+                  href="mailto:dr.coreycultrera@gmail.com"
+                  color="var(--foreground-color)"
+                  hoverColor="var(--dark-green)"
+                  icon={<EmailIcon/>}
+                  linkText="Email Us"
+                />
+              </Box>
+            </Typography>
             <Navbar />
             {children}
             <Routes>
