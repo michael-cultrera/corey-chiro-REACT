@@ -2,6 +2,8 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { IconButton, Typography, Box, Link } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import Logo from "./Logo";
+import OutlinedButton from "./OutlinedButton";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,14 +33,21 @@ export default function Navbar() {
     <Typography>
       <Box
         sx={{
-          justifyContent: "center",
+          // justifyContent: "center",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
           width: "100%",
-          height: menuOpen ? 200 : 60,
+          height: 90,
           bgcolor: "var(--navbar-color)",
         }}
       >
+        <Box sx={{
+          pl: 2,
+          display: "flex",
+          alignItems: "center"
+        }}>
+          <Logo width="120px" />
+        </Box>
         {isMobile && (
           <IconButton
             color="inherit"
@@ -46,7 +55,8 @@ export default function Navbar() {
             onClick={handleMenuToggle}
             sx={{
               justifyContent: "center",
-            }}
+              height: "100%"
+            }}  
           >
             <MenuIcon />
           </IconButton>
@@ -56,11 +66,11 @@ export default function Navbar() {
             sx={{
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
-              justifyContent: { xs: "space-around", md: "flex-end" },
+              justifyContent: "flex-end",
               alignItems: "center",
-              width: "100%",
               gap: { xs: 1, md: 4 },
               pr: { md: 4 },
+              marginLeft: "auto",
             }}
           >
             <Link
@@ -115,26 +125,7 @@ export default function Navbar() {
             >
               <Typography variant="body">Book An Appointment</Typography>
             </Link>
-            <Link
-              href="/contact-us"
-              sx={{
-                color: "black",
-                borderRadius: "10px",
-                border: "1px solid black",
-                width: "100px",
-                textDecoration: "none",
-                textAlign: "center",
-                padding: "6px 16px",
-                transition: "background-color 0.3s ease, color 0.3s ease",
-                '&:hover': {
-                  borderColor: "black",
-                  backgroundColor: "black", 
-                  color: "var(--dark-green)"
-                }
-              }}
-            >
-              <Typography variant="body">Contact</Typography>
-            </Link>
+            <OutlinedButton buttonText={"Contact"} onClick={() => window.location.href = "/contact-us"}/>
           </Box>
         )}
       </Box>
