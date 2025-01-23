@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import theme from "./theme";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
-import OutlinedButton from "./components/OutlinedButton";
 import "./index.css";
 import HomePage from "./pages/HomePage";
 import ContactUs from "./pages/ContactUs";
@@ -30,9 +29,10 @@ export default function RootLayout({ children }) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: '100%',
+                width: {xs: '80%', sm: '100%'},
                 py: 2,
                 gap: 4,
+                mx: 'auto',
               }}>
                 <LinkWithIcon 
                   href="/book-appointment" 
@@ -48,13 +48,17 @@ export default function RootLayout({ children }) {
                   icon={<CallIcon/>} 
                   linkText="(416)-497-8585" 
                 />
-                <LinkWithIcon 
-                  href="mailto:dr.coreycultrera@gmail.com"
-                  color="var(--foreground-color)"
-                  hoverColor="var(--dark-green)"
-                  icon={<EmailIcon/>}
-                  linkText="Email Us"
-                />
+                <Box sx={{
+                  display: { xs: 'none', sm: 'block' }
+                }}>
+                  <LinkWithIcon 
+                    href="mailto:dr.coreycultrera@gmail.com"
+                    color="var(--foreground-color)"
+                    hoverColor="var(--dark-green)"
+                    icon={<EmailIcon/>}
+                    linkText="Email Us"
+                  />
+                </Box>
               </Box>
             </Typography>
             <Navbar />
