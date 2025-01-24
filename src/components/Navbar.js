@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { IconButton, Typography, Box, Link } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
 import Logo from "./Logo";
 import OutlinedButton from "./OutlinedButton";
 
@@ -17,8 +18,7 @@ export default function Navbar() {
   // keep track of when screen is mobile
   useEffect(() => {
     const handleResize = () => {
-      const mobile = window.matchMedia("(max-width: 768px)").matches;
-      setIsMobile(mobile);
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
       setMenuOpen(false);
     };
     window.addEventListener("resize", handleResize);
@@ -33,7 +33,7 @@ export default function Navbar() {
     <Typography>
       <Box
         sx={{
-          // justifyContent: "center",
+          position: "relative",
           display: "flex",
           flexDirection: "row",
           width: "100%",
@@ -54,23 +54,32 @@ export default function Navbar() {
             aria-label="menu"
             onClick={handleMenuToggle}
             sx={{
-              justifyContent: "center",
-              height: "100%"
-            }}  
+              position: "absolute",
+              right: 16,
+              top: "50%",
+              transform: "translateY(-50%)"
+            }}
           >
-            <MenuIcon />
+            {menuOpen ? <CloseIcon/> : <MenuIcon />}
           </IconButton>
         )}
         {(menuOpen || !isMobile) && (
           <Box
+            id="navbar-links"
             sx={{
               display: "flex",
               flexDirection: { xs: "column", md: "row" },
-              justifyContent: "flex-end",
-              alignItems: "center",
-              gap: { xs: 1, md: 4 },
-              pr: { md: 4 },
-              marginLeft: "auto",
+              alignItems: { xs: "flex-end", md: "center" },
+              position: { xs: "absolute", md: "static" },
+              top: { xs: "90px", md: "auto" },
+              right: { xs: 0, md: "auto" },
+              bgcolor: { xs: "var(--navbar-color)", md: "transparent" },
+              width: { xs: "200px", md: "auto" },
+              padding: { xs: 2, md: 0 },
+              gap: { xs: 2, md: 4 },
+              marginLeft: { xs: 0, md: "auto" },
+              pr: { xs: 3, md: 4 },
+              zIndex: 1000,
             }}
           >
             <Link
