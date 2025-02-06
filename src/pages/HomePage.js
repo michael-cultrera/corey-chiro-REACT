@@ -14,10 +14,6 @@ const handleScroll = () => {
 export default function Home() {
   return (
     <Typography>
-      <Box
-        sx={{
-          minHeight:"100vh"
-        }}>
       <Box sx={{ position: 'relative' }}>
         <Box
           component="img"
@@ -45,43 +41,14 @@ export default function Home() {
           }}
         >
           <span style={{ fontSize: '22px' }}>Welcome to</span>
-          <span style={{ fontSize: '40px' }}><br />Cor's Chiropractic Clinic</span>
+          <span style={{ fontSize: '40px' }}><br />Kinetic Chiropractic</span>
         </Typography>
-      </Box>
-        <Box
-          sx={{
-            width: "100%",
-            textAlign: "center",
-            pt: "10px"
-          }}
-        >
-          <Button
-            onClick={handleScroll}
-            variant="outlined"
-            sx={{
-              flexDirection: "column",
-              textTransform: "none",
-              color: "black",
-              borderRadius: "10px",
-              borderColor: "black",
-              width: "180px",
-              transition: "background-color 0.3s ease, color 0.3s ease",
-              '&:hover': {
-                borderColor: "black",
-                backgroundColor: "black",
-                color: "var(--honeydew)"
-              }
-            }}
-          >
-            <Typography variant="body">Learn More</Typography>
-          </Button>
-        </Box>
       </Box>
       <Container>
-        <Typography variant="header" id="techniques-used" sx={{pt:"20px"}}>
+        <Typography variant="header" id="techniques-used" sx={{pt:"20px", textAlign: "center"}}>
           Techniques Used
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={3} justifyContent="center">
           <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
@@ -103,14 +70,14 @@ export default function Home() {
               description="Myofascial Release relieves tight muscles through patient movements and practitioner guidance, similar to deep tissue massage but more targeted. Gua Sha tools may also be used to release muscle adhesions and realign tissues."
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
               title="Therapeutic Ultrasound"
               description="Therapeutic ultrasound uses sound waves to break down scar tissue from injuries or strain. The vibrations create heat, boosting blood flow and aiding the body’s natural healing process."
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
               title="Exercise Prescription"
