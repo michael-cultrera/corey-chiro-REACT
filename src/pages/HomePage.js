@@ -86,10 +86,30 @@ export default function Home() {
           </Grid>
           {/* Try to add 1 more to make it even number */}
         </Grid>
-        <Typography variant="header" sx={{pt:"200px"}}>
-          Benefits of Care
+        </Container>
+        <Box sx={{backgroundColor: "var(--dark-green)", height: "100%", width: "100%", display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center", justifyContent: "center", padding: "40px", gap: "50px"}}>
+          <Box
+              component="img"
+              src="/images/corey_img.jpeg"
+              alt="Dr. Corey Cultrera"
+              sx={{
+                height:{ xs: "250px", sm: "300px", xl: "450px" },
+                objectFit: "cover",
+              }}
+            />
+          <Box>
+            <Typography variant="header" sx={{mb: 2}}>
+              Meet Dr. Corey Cultrera
+            </Typography>
+            <Typography variant="body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </Typography>
+          </Box>
+      </Box>
+      <Container>
+      <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
+          Conditions Treated Here
         </Typography>
-
       </Container>
     </Typography>
   );
