@@ -2,14 +2,7 @@
 
 import * as React from "react";
 import { Button, Box, Typography, Container, Grid } from "@mui/material";
-import ImageCard from "../components/ImageCard"; 
-
-const handleScroll = () => {
-  const targetElement = document.getElementById("techniques-used");
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
+import ImageCard from "../components/ImageCard";
 
 export default function Home() {
   return (
@@ -40,12 +33,42 @@ export default function Home() {
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
           }}
         >
+          <Box>
+
+          </Box>
           <span style={{ fontSize: '22px' }}>Welcome to</span>
-          <span style={{ fontSize: '40px' }}><br />Kinetic Chiropractic</span>
+          <span style={{ fontSize: '40px' }}><br />Kinetic Chiropractic</span><br /><br />
+          <Button
+            onClick={() => {window.location.href = "/contact-us"}}
+            variant="outlined"
+            sx={{
+              height: "50px",
+              flexDirection: "column",
+              textTransform: "none",
+              color: "white",
+              backgroundColor: "var(--dark-green)",
+              borderRadius: "20px",
+              borderColor: "var(--dark-green)",
+              transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
+              '&:hover': {
+              borderColor: "black",
+              backgroundColor: "black",
+              color: "var(--honeydew)"
+              }
+          }}
+        >
+            <Typography variant="body">{"Contact to Book"}</Typography>
+        </Button>
         </Typography>
       </Box>
       <Container>
-        <Typography variant="header" id="techniques-used" sx={{pt:"20px", textAlign: "center"}}>
+        <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
+          Move Freely, Live Fully
+        </Typography>
+        <Typography variant="body" sx={{textAlign: "center"}}>
+        Welcome to Kinetic Chiropractic—where your movement is our mission. Experience personalized, hands-on care that restores balance and enhances your natural vitality. Our innovative techniques empower you to move freely, feel your best, and embrace life with renewed energy. Discover the kinetic difference today!
+        </Typography>
+        <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
           Techniques Used
         </Typography>
         <Grid container spacing={3} justifyContent="center">
@@ -59,7 +82,7 @@ export default function Home() {
           <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
-              title="Neuromechanical Impulse Mechanical Adjusting"
+              title="Neuromechanical Impulse Adjusting"
               description="This technique uses a device to deliver precise thrusts to restricted joints, improving mobility and reducing pain caused by tension and poor body mechanics."
             />
           </Grid>
