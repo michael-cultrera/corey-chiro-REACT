@@ -7,6 +7,7 @@ import ImageCard from "../components/ImageCard";
 export default function Home() {
   return (
     <Typography>
+      <Container>
       <Box sx={{ position: 'relative' }}>
         <Box
           component="img"
@@ -33,9 +34,6 @@ export default function Home() {
             textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
           }}
         >
-          <Box>
-
-          </Box>
           <span style={{ fontSize: '22px' }}>Welcome to</span>
           <span style={{ fontSize: '40px' }}><br />Kinetic Chiropractic</span><br /><br />
           <Button
@@ -61,17 +59,13 @@ export default function Home() {
         </Button>
         </Typography>
       </Box>
-      <Container>
-        <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
-          Move Freely, Live Fully
+        <Typography variant="header" sx={{textAlign: "center", fontSize: "30px", pt: "50px"}}>
+          Move Better, Feel Better, Live Better.
         </Typography>
-        <Typography variant="body" sx={{textAlign: "center"}}>
-        Welcome to Kinetic Chiropractic—where your movement is our mission. Experience personalized, hands-on care that restores balance and enhances your natural vitality. Our innovative techniques empower you to move freely, feel your best, and embrace life with renewed energy. Discover the kinetic difference today!
+        <Typography variant="header" sx={{pt:"200px", textAlign: "center"}}>
+          Techniques We Offer
         </Typography>
-        <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
-          Techniques Used
-        </Typography>
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={3} justifyContent="center" pb="20px">
           <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
@@ -109,7 +103,6 @@ export default function Home() {
           </Grid>
           {/* Try to add 1 more to make it even number */}
         </Grid>
-        </Container>
         <Box sx={{backgroundColor: "var(--dark-green)", height: "100%", width: "100%", display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center", justifyContent: "center", padding: "40px", gap: "50px"}}>
           <Box
               component="img"
@@ -129,10 +122,75 @@ export default function Home() {
             </Typography>
           </Box>
       </Box>
-      <Container>
       <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
-          Conditions Treated Here
-        </Typography>
+        Conditions Treated Here
+      </Typography>
+      <Grid container spacing={14} sx={{pt: "20px", pb: "20px"}}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/back-pain.png" alt="Back Pain" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Back Pain
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/broken-bone.png" alt="Joint pain" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Joint Pain
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/depression.png" alt="Stress" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Stress
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/neck.png" alt="Neck Pain" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Neck Pain
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/shoulder.png" alt="Frozen Shoulder" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Frozen Shoulder
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/foot.png" alt="Plantar Fasciitis" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Plantar Fasciitis
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/office-syndrome.png" alt="Poor Posture" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Poor Posture
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/scar-tissue.png" alt="Scar Tissue" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Scar Tissue
+          </Typography>
+        </Grid>
+      </Grid>
       </Container>
     </Typography>
   );
