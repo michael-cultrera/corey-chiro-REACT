@@ -44,6 +44,8 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           maxWidth: `${breakpoints.values['2xl']}px !important`,
+          padding: "0 !important",
+          margin: "0 auto !important",
         }
       }
     }

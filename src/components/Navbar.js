@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { IconButton, Typography, Box, Link } from "@mui/material";
+import { IconButton, Typography, Box, Link, Container } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
 import Logo from "./Logo";
@@ -39,12 +39,13 @@ export default function Navbar() {
           width: "100%",
           height: 90,
           bgcolor: "var(--navbar-color)",
+          alignItems: "center",
         }}
       >
+        <Container>
+        <Box sx={{display: "flex", alignItems: "center", justifyContent: "center", }}>
         <Box sx={{
           pl: 2,
-          display: "flex",
-          alignItems: "center"
         }}>
           <Logo width="120px" />
         </Box>
@@ -137,6 +138,8 @@ export default function Navbar() {
             <OutlinedButton buttonText={"Contact"} onClick={() => window.location.href = "/contact-us"}/>
           </Box>
         )}
+        </Box>
+        </Container>
       </Box>
     </Typography>
   );

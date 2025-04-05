@@ -59,13 +59,10 @@ export default function Home() {
         </Button>
         </Typography>
       </Box>
-        <Typography variant="header" sx={{textAlign: "center", fontSize: "30px", pt: "50px"}}>
-          Move Better, Feel Better, Live Better.
-        </Typography>
         <Typography variant="header" sx={{pt:"200px", textAlign: "center"}}>
           Techniques We Offer
         </Typography>
-        <Grid container spacing={3} justifyContent="center" pb="20px">
+        <Grid container spacing={3} justifyContent="center" pb="20px" px="20px">
           <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
@@ -101,7 +98,6 @@ export default function Home() {
               description="Exercise prescriptions help maintain alignment and stability after releasing tension, ensuring muscles fire correctly for efficient movement."
             />
           </Grid>
-          {/* Try to add 1 more to make it even number */}
         </Grid>
         <Box sx={{backgroundColor: "var(--dark-green)", height: "100%", width: "100%", display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center", justifyContent: "center", padding: "40px", gap: "50px"}}>
           <Box
@@ -123,9 +119,43 @@ export default function Home() {
           </Box>
       </Box>
       <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
-        Conditions Treated Here
+        Conditions We Treat
       </Typography>
-      <Grid container spacing={14} sx={{pt: "20px", pb: "20px"}}>
+      <Grid container spacing={3} justifyContent="center" pb="20px" px="20px">
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Back Pain</Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Joint Pain</Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Stress</Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Neck Pain</Typography>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      {/* <Grid container spacing={14} sx={{pt: "20px", pb: "20px"}}>
         <Grid item xs={12} sm={6} md={3}>
           <Button variant="contained" style={{backgroundColor: "transparent"}}>
             <img src="/conditions/back-pain.png" alt="Back Pain" style={{width: "100%", height: "auto"}} />
@@ -190,7 +220,7 @@ export default function Home() {
             Scar Tissue
           </Typography>
         </Grid>
-      </Grid>
+      </Grid> */}
       </Container>
     </Typography>
   );
