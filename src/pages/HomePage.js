@@ -2,18 +2,12 @@
 
 import * as React from "react";
 import { Button, Box, Typography, Container, Grid } from "@mui/material";
-import ImageCard from "../components/ImageCard"; 
-
-const handleScroll = () => {
-  const targetElement = document.getElementById("techniques-used");
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
+import ImageCard from "../components/ImageCard";
 
 export default function Home() {
   return (
     <Typography>
+      <Container>
       <Box sx={{ position: 'relative' }}>
         <Box
           component="img"
@@ -41,14 +35,34 @@ export default function Home() {
           }}
         >
           <span style={{ fontSize: '22px' }}>Welcome to</span>
-          <span style={{ fontSize: '40px' }}><br />Kinetic Chiropractic</span>
+          <span style={{ fontSize: '40px' }}><br />Kinetic Chiropractic</span><br /><br />
+          <Button
+            onClick={() => {window.location.href = "/contact-us"}}
+            variant="outlined"
+            sx={{
+              height: "50px",
+              flexDirection: "column",
+              textTransform: "none",
+              color: "white",
+              backgroundColor: "var(--dark-green)",
+              borderRadius: "20px",
+              borderColor: "var(--dark-green)",
+              transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
+              '&:hover': {
+              borderColor: "black",
+              backgroundColor: "black",
+              color: "var(--honeydew)"
+              }
+          }}
+        >
+            <Typography variant="body">{"Contact to Book"}</Typography>
+        </Button>
         </Typography>
       </Box>
-      <Container>
-        <Typography variant="header" id="techniques-used" sx={{pt:"20px", textAlign: "center"}}>
-          Techniques Used
+        <Typography variant="header" sx={{pt:"200px", textAlign: "center"}}>
+          Techniques We Offer
         </Typography>
-        <Grid container spacing={3} justifyContent="center">
+        <Grid container spacing={3} justifyContent="center" pb="20px" px="20px">
           <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
@@ -59,7 +73,7 @@ export default function Home() {
           <Grid item xs={12} sm={6} md={4}>
             <ImageCard 
               image="images/sample1.jpeg"
-              title="Neuromechanical Impulse Mechanical Adjusting"
+              title="Neuromechanical Impulse Adjusting"
               description="This technique uses a device to deliver precise thrusts to restricted joints, improving mobility and reducing pain caused by tension and poor body mechanics."
             />
           </Grid>
@@ -84,9 +98,7 @@ export default function Home() {
               description="Exercise prescriptions help maintain alignment and stability after releasing tension, ensuring muscles fire correctly for efficient movement."
             />
           </Grid>
-          {/* Try to add 1 more to make it even number */}
         </Grid>
-        </Container>
         <Box sx={{backgroundColor: "var(--dark-green)", height: "100%", width: "100%", display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center", justifyContent: "center", padding: "40px", gap: "50px"}}>
           <Box
               component="img"
@@ -106,10 +118,109 @@ export default function Home() {
             </Typography>
           </Box>
       </Box>
-      <Container>
       <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
-          Conditions Treated Here
-        </Typography>
+        Conditions We Treat
+      </Typography>
+      <Grid container spacing={3} justifyContent="center" pb="20px" px="20px">
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Back Pain</Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Joint Pain</Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Stress</Typography>
+              </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6} md={3}>
+            <Box sx={{ position: "relative" }}>
+              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
+              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
+                <Typography variant="h4">Neck Pain</Typography>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      {/* <Grid container spacing={14} sx={{pt: "20px", pb: "20px"}}>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/back-pain.png" alt="Back Pain" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Back Pain
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/broken-bone.png" alt="Joint pain" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Joint Pain
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/depression.png" alt="Stress" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Stress
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/neck.png" alt="Neck Pain" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Neck Pain
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/shoulder.png" alt="Frozen Shoulder" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Frozen Shoulder
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/foot.png" alt="Plantar Fasciitis" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Plantar Fasciitis
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/office-syndrome.png" alt="Poor Posture" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Poor Posture
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <Button variant="contained" style={{backgroundColor: "transparent"}}>
+            <img src="/conditions/scar-tissue.png" alt="Scar Tissue" style={{width: "100%", height: "auto"}} />
+          </Button>
+          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
+            Scar Tissue
+          </Typography>
+        </Grid>
+      </Grid> */}
       </Container>
     </Typography>
   );
