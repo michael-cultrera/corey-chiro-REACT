@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 import theme from "./theme";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./index.css";
 import HomePage from "./pages/HomePage";
 import ContactUs from "./pages/ContactUs";
@@ -70,6 +71,7 @@ export default function RootLayout({ children }) {
               <Route path="/book-appointment" element={<BookAppointment />} />
               <Route path="/patient-forms" element={<PatientForms />} />
             </Routes>
+            <Footer/>
           </ThemeProvider>
         </Router>
       </body>
