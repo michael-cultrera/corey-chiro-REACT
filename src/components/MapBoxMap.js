@@ -8,8 +8,8 @@ export default function MapBoxMap() {
   return (
     <Map
       initialViewState={{
-        longitude: -79.35350827489158,
-        latitude: 43.773404913278924,
+        longitude: -79.32944594464831,
+        latitude: 43.79439651592106,
         zoom: 15,
       }}
       style={{ width: "100%", height: 400 }}
@@ -17,8 +17,8 @@ export default function MapBoxMap() {
       mapboxAccessToken={MAPBOX_TOKEN}
     >
       <Marker
-        longitude={-79.35350827489158}
-        latitude={43.773404913278924}
+        longitude={-79.32944594464831}
+        latitude={43.79439651592106}
         color="red"
       />
     </Map>

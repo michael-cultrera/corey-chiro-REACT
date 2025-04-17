@@ -8,7 +8,11 @@ export default function ContactUs() {
     <Container>
       <Typography>
         <Typography variant="header">Location</Typography>
-        <Typography variant="body">68 Shaughnessy Blvd, North York, ON M2J 1J3</Typography>
+        <Typography variant="body">
+          <a href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2N2" target="_blank" rel="noopener noreferrer" style={{ color: "var(--link-color)" }}>
+            2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2N2
+          </a>
+        </Typography>
         <MapBoxMap />
         <Box
           sx={{
