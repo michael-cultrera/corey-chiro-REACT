@@ -35,9 +35,9 @@ export default function Home() {
           }}
         >
           <span style={{ fontSize: '22px' }}>Welcome to</span>
-          <span style={{ fontSize: '40px' }}><br />Kinetic Chiropractic</span><br /><br />
+          <span style={{ fontSize: '40px' }}><br />Kinect Chiropractic</span><br /><br />
           <Button
-            onClick={() => {window.location.href = "/contact-us"}}
+            onClick={() => {window.location.href = "/book-appointment"}}
             variant="outlined"
             sx={{
               height: "50px",
@@ -55,7 +55,7 @@ export default function Home() {
               }
           }}
         >
-            <Typography variant="body">{"Contact to Book"}</Typography>
+            <Typography variant="body">{"Book An Appointment"}</Typography>
         </Button>
         </Typography>
       </Box>
