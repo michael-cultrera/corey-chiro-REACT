@@ -60,7 +60,7 @@ export default function Home() {
         </Typography>
       </Box>
         <Typography variant="header" sx={{pt:"200px", textAlign: "center"}}>
-          Techniques We Offer
+          Techniques Used
         </Typography>
         <Grid container spacing={3} justifyContent="center" pb="20px" px="20px">
           <Grid item xs={12} sm={6} md={4}>
@@ -110,16 +110,18 @@ export default function Home() {
               }}
             />
           <Box>
-            <Typography variant="header" sx={{mb: 2}}>
-              Meet Dr. Corey Cultrera
+            <Typography variant="header" sx={{mb: 1}}>
+              The Mission
             </Typography>
             <Typography variant="body">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+              Our mission is to improve the health and quality of life of our community and families through personalized, 
+              compassionate, and evidence-based chiropractic care. We focus on restoring balance to the body, relieving pain,
+              and empowering patients with the knowledge and tools to live healthier, more active lives.
             </Typography>
           </Box>
       </Box>
-      <Typography variant="header" sx={{pt:"20px", textAlign: "center"}}>
-        Conditions We Treat
+      <Typography variant="header" sx={{pt:"80px", textAlign: "center"}}>
+        Conditions Treated
       </Typography>
       <Grid container spacing={3} justifyContent="center" pb="20px" px="20px">
           <Grid item xs={12} sm={6} md={3}>
