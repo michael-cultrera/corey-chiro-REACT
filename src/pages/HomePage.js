@@ -1,8 +1,8 @@
 "use client";
 
-import * as React from "react";
 import { Button, Box, Typography, Container, Grid } from "@mui/material";
 import ImageCard from "../components/ImageCard";
+import FilledButton from "../components/FilledButton";
 
 export default function Home() {
   return (
@@ -36,27 +36,7 @@ export default function Home() {
         >
           <span style={{ fontSize: '22px' }}>Welcome to</span>
           <span style={{ fontSize: '40px' }}><br />Kinect Chiropractic</span><br /><br />
-          <Button
-            onClick={() => {window.location.href = "/book-appointment"}}
-            variant="outlined"
-            sx={{
-              height: "50px",
-              flexDirection: "column",
-              textTransform: "none",
-              color: "white",
-              backgroundColor: "var(--dark-green)",
-              borderRadius: "20px",
-              borderColor: "var(--dark-green)",
-              transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
-              '&:hover': {
-              borderColor: "black",
-              backgroundColor: "black",
-              color: "var(--honeydew)"
-              }
-          }}
-        >
-            <Typography variant="body">{"Book An Appointment"}</Typography>
-        </Button>
+          <FilledButton buttonText="Book An Appointment" onClick={() => {window.location.href = "/book-appointment"}}/>
         </Typography>
       </Box>
         <Typography variant="header" sx={{pt:"200px", textAlign: "center"}}>

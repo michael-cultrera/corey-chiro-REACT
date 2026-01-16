@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, TextField, Button, Typography } from "@mui/material";
+import FilledButton from "./FilledButton";
 
 const GetInTouch = () => {
   const handleSubmit = (event) => {
@@ -8,7 +9,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <Box>
+    <Box sx={{ pb: 5, }}>
       <Typography variant="header" sx={{ textAlign: "center" }}>Get In Touch</Typography>
       <form
         onSubmit={handleSubmit}
@@ -18,34 +19,71 @@ const GetInTouch = () => {
           alignItems: "center",
         }}
       >
-        <TextField
-          label="Name"
-          margin="normal"
-          required
-        />
-        <TextField
-          label="Email"
-          type="email"
-          margin="normal"
-          required
-        />
+        <Box sx={{ width: "100%", maxWidth: "400px" }}>
+          <TextField
+            label="Name"
+            margin="normal"
+            required
+            fullWidth
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                borderRadius: '20px',
+                '&:hover fieldset': {
+                  borderColor: 'var(--dark-green)',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'var(--dark-green)',
+                },
+              },
+              '& label.Mui-focused': {
+                color: 'var(--dark-green)',
+              },
+            }}
+          />
+          <TextField
+            label="Email"
+            type="email"
+            margin="normal"
+            required
+            fullWidth
+            sx={{
+              '& .MuiOutlinedInput-root': {
+                borderRadius: '20px',
+                '&:hover fieldset': {
+                  borderColor: 'var(--dark-green)',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'var(--dark-green)',
+                },
+              },
+              '& label.Mui-focused': {
+                color: 'var(--dark-green)',
+              },
+            }}
+          />
+        </Box>
         <TextField
           label="Message"
           multiline
           rows={4}
           margin="normal"
           required
+          sx={{ width: 500, pb: 2, 
+             '& .MuiOutlinedInput-root': {
+                borderRadius: '20px',
+                '&:hover fieldset': {
+                  borderColor: 'var(--dark-green)',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'var(--dark-green)',
+                },
+              },
+              '& label.Mui-focused': {
+                color: 'var(--dark-green)',
+              },
+            }}
         />
-        <Button
-          type="submit"
-          variant="contained"
-          sx={{
-            backgroundColor: "var(--link-color)",
-            "&:hover": { backgroundColor: "var(--link-color)", opacity: 0.8 },
-          }}
-        >
-          Send Message
-        </Button>
+        <FilledButton buttonText="Send Message" />
       </form>
     </Box>
   );
