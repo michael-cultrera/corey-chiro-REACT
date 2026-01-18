@@ -10,7 +10,7 @@ export default function FilledButton({ buttonText, onClick }) {
             height: "50px",
             flexDirection: "column",
             textTransform: "none",
-            color: "white",
+            color: "var(--honeydew)",
             backgroundColor: "var(--dark-green)",
             borderRadius: "20px",
             borderColor: "var(--dark-green)",

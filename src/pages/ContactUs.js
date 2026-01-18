@@ -8,7 +8,7 @@ export default function ContactUs() {
     <Container>
       <Typography>
         <Box sx={{px: "20px", pt: "20px"}}>
-          <Typography variant="header">Location</Typography>
+          <Typography variant="header">Our Office</Typography>
           <Typography variant="body">
             <a href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2N2" target="_blank" rel="noopener noreferrer" style={{ color: "var(--link-color)" }}>
               2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2N2
