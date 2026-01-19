@@ -135,6 +135,19 @@ export default function Navbar() {
             >
               <Typography variant="body">Book An Appointment</Typography>
             </Link>
+            <Link
+              href="/services"
+              sx={{
+                color: "var(--foreground-color)",
+                textDecoration: "none",
+                transition: "color 0.3s ease",
+                '&:hover': {
+                  color: "var(--honeydew)"
+                }
+              }}
+            >
+              <Typography variant="body">Services</Typography>
+            </Link>
             <OutlinedButton buttonText={"Contact"} onClick={() => window.location.href = "/contact-us"}/>
           </Box>
         )}

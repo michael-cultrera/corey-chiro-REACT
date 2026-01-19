@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Box, Typography, Container, Grid } from "@mui/material";
+import { Box, Typography, Container, Grid } from "@mui/material";
 import ImageCard from "../components/ImageCard";
 import FilledButton from "../components/FilledButton";
 

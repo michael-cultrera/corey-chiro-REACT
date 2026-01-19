@@ -11,6 +11,7 @@ import ContactUs from "./pages/ContactUs";
 import BookAppointment from "./pages/BookAppointment";
 import PatientForms from "./pages/PatientForms";
 import About from "./pages/About";
+import Services from "./pages/Services";
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -70,6 +71,7 @@ export default function RootLayout({ children }) {
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/book-appointment" element={<BookAppointment />} />
               <Route path="/patient-forms" element={<PatientForms />} />
+              <Route path="/services" element={<Services />} />
             </Routes>
             <Footer/>
           </ThemeProvider>
