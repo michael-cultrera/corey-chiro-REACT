@@ -1,159 +1,223 @@
-import * as React from "react";
-import { useState, useEffect } from "react";
-import { IconButton, Typography, Box, Link, Container } from "@mui/material";
+import { useState, useEffect, useCallback } from "react";
+import {
+  Box,
+  Container,
+  IconButton,
+  Typography,
+  Link,
+  Collapse,
+  ClickAwayListener,
+  Stack,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import Logo from "./Logo";
 import OutlinedButton from "./OutlinedButton";
 
-export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/patient-forms", label: "Patient Forms" },
+  { href: "/book-appointment", label: "Book An Appointment" },
+  { href: "/services", label: "Services" },
+];
 
-  // For hamburger menu on mobile screens
-  const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
+export default function Navbar() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery("(max-width:920px)");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isMobile) setMenuOpen(false);
+  }, [isMobile]);
+
+  useEffect(() => {
+    if (isMobile && menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobile, menuOpen]);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    if (menuOpen) document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
+  const handleToggle = useCallback(() => setMenuOpen((s) => !s), []);
+  const handleClose = useCallback(() => setMenuOpen(false), []);
+
+  const handleNavClick = (href) => (e) => {
+    handleClose();
+    window.location.href = href;
   };
 
-  // keep track of when screen is mobile
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
-      setMenuOpen(false);
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
+  if (isMobile) {
+    return (
+      <ClickAwayListener onClickAway={handleClose}>
+        <Box
+          component="header"
+          sx={{
+            position: "relative",
+            width: "100%",
+            bgcolor: "var(--navbar-color)",
+            zIndex: theme.zIndex.appBar || 1200,
+          }}
+        >
+          <Container maxWidth="lg" sx={{ p: 0 }}>
+            <Box
+              sx={{
+                height: 90,
+                display: "flex",
+                alignItems: "center",
+                gap: 2,
+                px: 2,
+                position: "relative",
+              }}
+            >
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Logo width="120px" />
+              </Box>
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+              <IconButton
+                aria-label={menuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-navigation"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleToggle();
+                }}
+                sx={{
+                  marginLeft: "auto",
+                  position: "absolute",
+                  right: 16,
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  color: "inherit",
+                }}
+              >
+                {menuOpen ? <CloseIcon /> : <MenuIcon />}
+              </IconButton>
+            </Box>
+          </Container>
 
-  return (
-    <Typography>
-      <Box
-        sx={{
-          position: "relative",
-          display: "flex",
-          flexDirection: "row",
-          width: "100%",
-          height: 90,
-          bgcolor: "var(--navbar-color)",
-          alignItems: "center",
-        }}
-      >
-        <Container>
-        <Box sx={{display: "flex", alignItems: "center", justifyContent: "center", }}>
-        <Box sx={{
-          pl: 2,
-        }}>
-          <Logo width="120px" />
-        </Box>
-        {isMobile && (
-          <IconButton
-            color="inherit"
-            aria-label="menu"
-            onClick={handleMenuToggle}
+          <Collapse
+            in={menuOpen}
+            timeout="auto"
             sx={{
               position: "absolute",
-              right: 16,
-              top: "50%",
-              transform: "translateY(-50%)"
+              top: "90px",
+              right: 0,
+              bgcolor: "var(--navbar-color)",
+              zIndex: (theme.zIndex.appBar || 1200) + 1,
+              borderTop: "1px solid rgba(255,255,255,0.04)",
             }}
           >
-            {menuOpen ? <CloseIcon/> : <MenuIcon />}
-          </IconButton>
-        )}
-        {(menuOpen || !isMobile) && (
-          <Box
-            id="navbar-links"
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              alignItems: { xs: "flex-end", md: "center" },
-              position: { xs: "absolute", md: "static" },
-              top: { xs: "90px", md: "auto" },
-              right: { xs: 0, md: "auto" },
-              bgcolor: { xs: "var(--navbar-color)", md: "transparent" },
-              width: { xs: "200px", md: "auto" },
-              padding: { xs: 2, md: 0 },
-              gap: { xs: 2, md: 4 },
-              marginLeft: { xs: 0, md: "auto" },
-              pr: { xs: 3, md: 4 },
-              zIndex: 1000,
-            }}
-          >
-            <Link
-              href="/"
+            <Box
+              id="mobile-navigation"
               sx={{
-                color: "var(--foreground-color)",
-                textDecoration: "none",
-                transition: "color 0.3s ease",
-                '&:hover': {
-                  color: "var(--honeydew)"
-                }
+                px: 3,
+                py: 2,
               }}
             >
-              <Typography variant="body">Home</Typography>
-            </Link>
-            <Link
-              href="/about"
-              sx={{
-                color: "var(--foreground-color)", 
-                textDecoration: "none",
-                transition: "color 0.3s ease",
-                '&:hover': {
-                  color: "var(--honeydew)"
-                }
-              }}
-            >
-              <Typography variant="body">About</Typography>
-            </Link>
-            <Link
-              href="/patient-forms"
-              sx={{
-                color: "var(--foreground-color)",
-                textDecoration: "none",
-                transition: "color 0.3s ease",
-                '&:hover': {
-                  color: "var(--honeydew)"
-                }
-              }}
-            >
-              <Typography variant="body">Patient Forms</Typography>
-            </Link>
-            <Link
-              href="/book-appointment"
-              sx={{
-                color: "var(--foreground-color)",
-                textDecoration: "none",
-                transition: "color 0.3s ease",
-                '&:hover': {
-                  color: "var(--honeydew)"
-                }
-              }}
-            >
-              <Typography variant="body">Book An Appointment</Typography>
-            </Link>
-            <Link
-              href="/services"
-              sx={{
-                color: "var(--foreground-color)",
-                textDecoration: "none",
-                transition: "color 0.3s ease",
-                '&:hover': {
-                  color: "var(--honeydew)"
-                }
-              }}
-            >
-              <Typography variant="body">Services</Typography>
-            </Link>
-            <OutlinedButton buttonText={"Contact"} onClick={() => window.location.href = "/contact-us"}/>
-          </Box>
-        )}
+              <Stack direction="column" spacing={2} alignItems="flex-end">
+                {NAV_LINKS.map(({ href, label }) => (
+                  <Link
+                    key={href}
+                    onClick={handleNavClick(href)}
+                    underline="none"
+                    sx={{
+                      color: "var(--foreground-color)",
+                      transition: "color 0.2s",
+                      "&:hover": { color: "var(--honeydew)" },
+                      width: "100%",
+                      textAlign: "right",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <Typography variant="body1">{label}</Typography>
+                  </Link>
+                ))}
+
+                <Box sx={{ width: "100%", display: "flex", justifyContent: "flex-end" }}>
+                  <OutlinedButton
+                    buttonText={"Contact"}
+                    onClick={() => {
+                      handleClose();
+                      window.location.href = "/contact-us";
+                    }}
+                  />
+                </Box>
+              </Stack>
+            </Box>
+          </Collapse>
         </Box>
-        </Container>
-      </Box>
-    </Typography>
+      </ClickAwayListener>
+    );
+  }
+
+  // Desktop layout
+  return (
+    <Box
+      component="header"
+      sx={{
+        position: "relative",
+        width: "100%",
+        bgcolor: "var(--navbar-color)",
+        zIndex: theme.zIndex.appBar || 1200,
+      }}
+    >
+      <Container maxWidth="lg" sx={{ p: 0 }}>
+        <Box
+          sx={{
+            height: 90,
+            display: "flex",
+            alignItems: "center",
+            gap: 2,
+            px: 2,
+            position: "relative",
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Logo width="120px" />
+          </Box>
+
+          <Stack
+            direction="row"
+            spacing={4}
+            sx={{ marginLeft: "auto", alignItems: "center" }}
+          >
+            {NAV_LINKS.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                underline="none"
+                sx={{
+                  color: "var(--foreground-color)",
+                  transition: "color 0.2s",
+                  "&:hover": { color: "var(--honeydew)" },
+                  cursor: "pointer",
+                }}
+              >
+                <Typography variant="body1">{label}</Typography>
+              </Link>
+            ))}
+
+            <OutlinedButton
+              buttonText={"Contact"}
+              onClick={() => (window.location.href = "/contact-us")}
+            />
+          </Stack>
+        </Box>
+      </Container>
+    </Box>
   );
 }
