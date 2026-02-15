@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Box, Typography, Container, TableContainer, Paper, Table, TableBody, TableRow, TableCell } from "@mui/material";
 import FilledButton from "../components/FilledButton";
 
@@ -49,7 +48,7 @@ export default function BookAppointment() {
             }}
           >
           </Box>
-          <Box sx={{width: 600, pb: 5,}}>
+          <Box sx={{ width: { xs: '100%', sm: 600 }, maxWidth: '100%', pb: 5, overflowX: 'auto' }}>
           <TableContainer component={Paper}>
             <Table sx={{backgroundColor: "var(--dark-green)", "& .MuiTableCell-root": {
       color: "var(--honeydew)",
