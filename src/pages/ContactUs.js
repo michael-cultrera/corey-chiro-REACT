@@ -20,16 +20,17 @@ export default function ContactUs() {
           sx={{
             pt: 5,
             display: { xs: "block", md: "flex" },
+            px: { xs: "20px" },
             justifyContent: "space-around",
           }}
         >
-          <Box>
+          <Box sx={{ pb: { xs: 4, md: 0 } }}>
             <Typography variant="header">Hours of Operation</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>Monday - Friday: 9:00 AM - 5:00 PM</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>Saturday: 9:00 AM - 1:00 PM</Typography>
             <Typography variant="body">Sunday: Closed</Typography>
           </Box>
-          <Box>
+          <Box sx={{ pb: { xs: 4, md: 0 } }}>
             <Typography variant="header">Contact Info</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>
               Phone:{" "}

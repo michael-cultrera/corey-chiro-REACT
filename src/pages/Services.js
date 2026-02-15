@@ -3,24 +3,26 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 export default function Services() {
   return (
-    <Container>
-      <Typography sx={{px: "20px", pt: "20px"}}>
-        <Typography variant="header">Network Spinal Analysis (NSA) Treatment</Typography>
-        <Typography variant="body">Network Spinal Analysis (NSA) is a gentle, non-invasive approach that helps
-            your body release tension and stress while supporting overall spinal and nervous system health. Using precise, 
-            light touch along the spine, NSA promotes relaxation, improves energy flow, and enhances your body’s ability to adapt to stress.
-            <br/><br/>This technique is safe and effective for anyone—from babies to seniors—and everyone in between.
-        </Typography>
-        <Typography variant="body" sx={{ pt: 3,}}><strong>Benefits of NSA Include:</strong><br/><br/>
-            <ul>
-                <li><ArrowCircleRightIcon fontSize="xsmall"/> Chronic pain relief</li>
-                <li><ArrowCircleRightIcon fontSize="xsmall"/> Improved posture and spinal alignment</li>
-                <li><ArrowCircleRightIcon fontSize="xsmall"/> Enhanced athletic performance</li>
-                <li><ArrowCircleRightIcon fontSize="xsmall"/> Better sleep quality</li>
-                <li><ArrowCircleRightIcon fontSize="xsmall"/> Increased energy levels</li>
-                <li><ArrowCircleRightIcon fontSize="xsmall"/> Stress reduction and emotional well-being</li>
-            </ul>
-        </Typography>
+    <Typography sx={{pt: "20px"}}>
+        <Container>
+        <Box sx={{ backgroundColor: "var(--light-green)",}}> 
+            <Typography variant="header">Network Spinal Analysis (NSA) Treatment</Typography>
+            <Typography variant="body">Network Spinal Analysis (NSA) is a gentle, non-invasive approach that helps
+                your body release tension and stress while supporting overall spinal and nervous system health. Using precise, 
+                light touch along the spine, NSA promotes relaxation, improves energy flow, and enhances your body’s ability to adapt to stress.
+                <br/><br/>This technique is safe and effective for anyone—from babies to seniors—and everyone in between.
+            </Typography>
+            <Typography variant="body" sx={{ pt: 3,}}><strong>Benefits of NSA Include:</strong><br/><br/>
+                <ul>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Chronic pain relief</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Improved posture and spinal alignment</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Enhanced athletic performance</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Better sleep quality</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Increased energy levels</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Stress reduction and emotional well-being</li>
+                </ul>
+            </Typography>
+        </Box>
         <Typography variant="header" sx={{ pt: 4,}}>Shockwave Therapy</Typography>
         <Typography variant="body">Shockwave Therapy is a non-invasive, evidence-based treatment designed to relieve pain, 
             improve mobility, and accelerate the body’s natural healing process. It is commonly used for chronic musculoskeletal 
@@ -100,7 +102,7 @@ export default function Services() {
                 <li><ArrowCircleRightIcon fontSize="xsmall"/> A safe, low-force option for ongoing wellness care</li>
             </ul>
         </Typography>
-      </Typography>
-    </Container>
+        </Container>
+    </Typography>
   );
 }

@@ -3,8 +3,8 @@ import FilledButton from "../components/FilledButton";
 
 export default function BookAppointment() {
   return (
-    <Container>
-      <Typography>
+    <Typography>
+      <Container>
         <Box sx={{px: "20px", pt: "20px"}}>
         <Typography variant="header">Book An Appointment</Typography>
         <Typography variant="body" sx={{pb: 1}}>
@@ -90,7 +90,7 @@ export default function BookAppointment() {
         </Box>
         </Box>
         </Box>
-      </Typography>
-    </Container>
+      </Container>
+    </Typography>
   );
 }

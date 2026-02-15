@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, TextField, Button, Typography } from "@mui/material";
 import FilledButton from "./FilledButton";
 
@@ -19,7 +18,7 @@ const GetInTouch = () => {
           alignItems: "center",
         }}
       >
-        <Box sx={{ width: "100%", maxWidth: "400px" }}>
+        <Box sx={{ width: "100%", maxWidth: { xs: "200px", sm: "250px", md: "400px" } }}>
           <TextField
             label="Name"
             margin="normal"
@@ -68,7 +67,7 @@ const GetInTouch = () => {
           rows={4}
           margin="normal"
           required
-          sx={{ width: 500, pb: 2, 
+          sx={{ width: { xs: "85%", sm: "70%", md: "500px" }, pb: 2, 
              '& .MuiOutlinedInput-root': {
                 borderRadius: '20px',
                 '&:hover fieldset': {
