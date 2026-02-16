@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Typography } from "@mui/material";
 
 export default function FilledButton({ buttonText, onClick }) {
@@ -12,7 +11,7 @@ export default function FilledButton({ buttonText, onClick }) {
             textTransform: "none",
             color: "var(--honeydew)",
             backgroundColor: "var(--dark-green)",
-            borderRadius: "20px",
+            borderRadius: "10px",
             borderColor: "var(--dark-green)",
             transition: "background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease",
             '&:hover': {

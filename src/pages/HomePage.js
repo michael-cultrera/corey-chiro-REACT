@@ -1,8 +1,9 @@
 "use client";
 
-import { Box, Typography, Container, Grid } from "@mui/material";
-import ImageCard from "../components/ImageCard";
+import { Box, Typography, Container, Grid, Paper, Stack, ButtonBase } from "@mui/material";
 import FilledButton from "../components/FilledButton";
+import OutlinedButton from "../components/OutlinedButton";
+
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Box sx={{ position: 'relative' }}>
         <Box
           component="img"
-          src="/images/home_page_photo.jpg"
+          src="/images/home_page_photo.png"
           alt="Home Page Image"
           sx={{
             height: "550px",
@@ -38,6 +39,81 @@ export default function Home() {
           <span style={{ fontSize: '40px' }}><br />Kinect Chiropractic</span><br /><br />
           <FilledButton buttonText="Book An Appointment" onClick={() => {window.location.href = "/book-appointment"}}/>
         </Typography>
+      </Box>
+      <Box sx={{ mt: 3, mb: 6 }}>
+        <Container>
+          <Box sx={{ maxWidth: 960, mx: "auto", textAlign: "center", px: 2 }}>
+            <Typography variant="header" sx={{ fontWeight: 700, mb: 1 }}>
+              Providing Personalized Care Built Around Your Goals
+            </Typography>
+
+            <Typography variant="body1" sx={{ color: "text.secondary", mb: 3 }}>
+              At Kinect Chiropractic we combine gentle hands-on treatment, targeted rehabilitation, and practical tips so you can get back to the things you love — faster.
+            </Typography>
+
+            <Grid container spacing={2} sx={{ mb: 3 }}>
+              {[
+                { title: "Our Services", icon: "/images/services.jpg", nav: "/services" },
+                { title: "New Patients", icon: "/images/new_patients.jpg", nav: "/patient-forms" },
+                { title: "Contact Us", icon: "/images/contact.jpg", nav: "/contact-us" },
+              ].map((item) => (
+                <Grid item xs={12} sm={4} key={item.title}>
+                  <Paper
+                    elevation={0}
+                    sx={{
+                      p: 2,
+                      minHeight: 110,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                      bgcolor: "transparent",
+                      borderRadius: 1,
+                      textAlign: "center",
+                    }}
+                  >
+                    <ButtonBase
+                      onClick={() => window.location.href = item.nav}
+                      aria-label={`Learn more about ${item.title}`}
+                      sx={{
+                        width: 180,
+                        height: 180,
+                        borderRadius: "10px",
+                        overflow: "hidden",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        mb: 1.5,
+                        bgcolor: "background.paper",
+                        // boxShadow: 1,
+                      }}
+                    >
+                      <Box
+                        component="img"
+                        src={item.icon}
+                        alt={item.title ?? ""}
+                        sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                      />
+                    </ButtonBase>
+                    <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+                      {item.title}
+                    </Typography>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
+            <Stack direction="row" spacing={2} justifyContent="center">
+              <FilledButton
+                buttonText="Book An Appointment"
+                onClick={() => (window.location.href = "/book-appointment")}
+              />
+              <OutlinedButton
+                buttonText="Learn More"
+                onClick={() => (window.location.href = "/about")}
+              />
+            </Stack>
+          </Box>
+        </Container>
       </Box>
       <Typography variant="header" sx={{pt:"80px", textAlign: "center"}}>
         Conditions Treated
