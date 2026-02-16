@@ -85,7 +85,6 @@ export default function Home() {
                         justifyContent: "center",
                         mb: 1.5,
                         bgcolor: "background.paper",
-                        // boxShadow: 1,
                       }}
                     >
                       <Box
@@ -115,6 +114,63 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
+<Box sx={{ my: 8, bgcolor: "var(--dark-green)", py: 6 }}>
+  <Container>
+    <Box sx={{ maxWidth: 1000, mx: "auto", textAlign: "center", px: 2 }}>
+      <Typography variant="header" sx={{ mb: 1 }}>
+        Conditions We Commonly Treat
+      </Typography>
+
+      <Typography variant="body2" sx={{ color: "text.secondary", mb: 4 }}>
+        Whether you're dealing with chronic discomfort or a recent injury, 
+        we provide personalized care designed to restore movement and reduce pain.
+      </Typography>
+
+      <Grid container spacing={2} justifyContent="center">
+        {[
+          {label: "Back Pain", icon: "/images/back_pain.png"},
+          {label: "Neck Pain", icon: "/images/neck_pain.png"},
+          {label: "Headaches & Migraines", icon: "/images/headaches_migraines.png"},
+          {label: "Sciatica", icon: "/images/sciatica.png"},
+          {label: "Sports Injuries", icon: "/images/sports_injuries.png"},
+          {label: "Postural Strain", icon: "/images/postural_strain.png"},
+          {label: "Shoulder Pain", icon: "/images/shoulder_pain.png"},
+          {label: "Knee Pain", icon: "/images/knee_pain.png"},
+        ].map((condition) => (
+          <Grid item xs={6} sm={4} md={3} key={condition}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 1,
+                py: 1.5,
+                px: 2,
+                borderRadius: "30px",
+                border: "1px solid",
+                borderColor: "grey.300",
+                fontSize: 14,
+                fontWeight: 500,
+                bgcolor: "white",
+              }}
+            >
+              <condition.icon size={18} strokeWidth={1.5} />
+              {condition.label}
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+
+      <Box sx={{ mt: 4 }}>
+        <FilledButton
+          buttonText="See All Services"
+          onClick={() => (window.location.href = "/services")}
+        />
+      </Box>
+    </Box>
+  </Container>
+</Box>
+
       <Typography variant="header" sx={{pt:"80px", textAlign: "center"}}>
         Conditions Treated
       </Typography>
