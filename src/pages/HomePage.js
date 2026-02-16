@@ -3,6 +3,7 @@
 import { Box, Typography, Container, Grid, Paper, Stack, ButtonBase } from "@mui/material";
 import FilledButton from "../components/FilledButton";
 import OutlinedButton from "../components/OutlinedButton";
+import TestimonialsCarousel from "../components/TestimonialsCarousel";
 
 
 export default function Home() {
@@ -114,167 +115,64 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
-<Box sx={{ my: 8, bgcolor: "var(--dark-green)", py: 6 }}>
-  <Container>
-    <Box sx={{ maxWidth: 1000, mx: "auto", textAlign: "center", px: 2 }}>
-      <Typography variant="header" sx={{ mb: 1 }}>
-        Conditions We Commonly Treat
-      </Typography>
-      <Typography variant="body" sx={{ color: "text.secondary", mb: 4 }}>
-        Whether you're dealing with chronic discomfort or a recent injury, 
-        we provide personalized care designed to restore movement and reduce pain.
-      </Typography>
-      <Grid container spacing={2} justifyContent="center">
-        {[
-          {label: "Back Pain", icon: "images/back_pain.png"},
-          {label: "Neck Pain", icon: "/images/neck_pain.png"},
-          {label: "Headaches & Migraines", icon: "/images/headache.png"},
-          {label: "Plantar Fasciitis", icon: "/images/plantar_fasciitis.png"},
-          {label: "Sports Injuries", icon: "/images/sports_injuries.png"},
-          {label: "Postural Strain", icon: "/images/posture.png"},
-          {label: "Shoulder Pain", icon: "/images/shoulder_pain.png"},
-          {label: "Knee Pain", icon: "/images/knee_pain.png"},
-        ].map((condition) => (
-          <Grid item xs={6} sm={4} md={3} key={condition.label}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 1,
-              py: 1.5,
-              px: 2,
-              borderRadius: "30px",
-              border: "1px solid",
-              borderColor: "grey.300",
-              fontSize: 14,
-              fontWeight: 500,
-              bgcolor: "white",
-            }}
-          >
-            <Box
-              component="img"
-              src={condition.icon}
-              alt={condition.label}
-              sx={{
-                width: 100,
-                height: 100,
-                objectFit: "contain",
-              }}
-            />
-            <Typography variant="body">{condition.label}</Typography>
+      <Box sx={{ my: 8, bgcolor: "var(--dark-green)", py: 6 }}>
+        <Container>
+          <Box sx={{ maxWidth: 1000, mx: "auto", textAlign: "center", px: 2 }}>
+            <Typography variant="header" sx={{ mb: 1 }}>
+              Conditions We Commonly Treat
+            </Typography>
+            <Typography variant="body" sx={{ color: "text.secondary", mb: 4 }}>
+              Whether you're dealing with chronic discomfort or a recent injury, 
+              we provide personalized care designed to restore movement and reduce pain.
+            </Typography>
+            <Grid container spacing={2} justifyContent="center">
+              {[
+                {label: "Back Pain", icon: "images/back_pain.png"},
+                {label: "Neck Pain", icon: "/images/neck_pain.png"},
+                {label: "Headaches & Migraines", icon: "/images/headache.png"},
+                {label: "Plantar Fasciitis", icon: "/images/plantar_fasciitis.png"},
+                {label: "Sports Injuries", icon: "/images/sports_injuries.png"},
+                {label: "Postural Strain", icon: "/images/posture.png"},
+                {label: "Shoulder Pain", icon: "/images/shoulder_pain.png"},
+                {label: "Knee Pain", icon: "/images/knee_pain.png"},
+              ].map((condition) => (
+                <Grid item xs={6} sm={4} md={3} key={condition.label}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: 1,
+                    py: 1.5,
+                    px: 2,
+                    borderRadius: "30px",
+                    border: "1px solid",
+                    borderColor: "grey.300",
+                    fontSize: 14,
+                    fontWeight: 500,
+                    bgcolor: "white",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={condition.icon}
+                    alt={condition.label}
+                    sx={{
+                      width: 100,
+                      height: 100,
+                      objectFit: "contain",
+                    }}
+                  />
+                  <Typography variant="body">{condition.label}</Typography>
+                </Box>
+              </Grid>
+              ))}
+            </Grid>
           </Box>
-        </Grid>
-        ))}
-      </Grid>
-    </Box>
-  </Container>
-</Box>
-
-      <Typography variant="header" sx={{pt:"80px", textAlign: "center"}}>
-        Conditions Treated
-      </Typography>
-      <Grid container spacing={3} justifyContent="center" pb="20px" px="20px">
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ position: "relative" }}>
-              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
-              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
-                <Typography variant="h4">Back Pain</Typography>
-              </Box>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ position: "relative" }}>
-              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
-              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
-                <Typography variant="h4">Joint Pain</Typography>
-              </Box>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ position: "relative" }}>
-              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
-              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
-                <Typography variant="h4">Stress</Typography>
-              </Box>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Box sx={{ position: "relative" }}>
-              <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
-              <Box sx={{ position: "absolute", bottom: 0, left: 0, color: "white", padding: "10px" }}>
-                <Typography variant="h4">Neck Pain</Typography>
-              </Box>
-            </Box>
-          </Grid>
-        </Grid>
-      {/* <Grid container spacing={14} sx={{pt: "20px", pb: "20px"}}>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/back-pain.png" alt="Back Pain" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Back Pain
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/broken-bone.png" alt="Joint pain" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Joint Pain
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/depression.png" alt="Stress" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Stress
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/neck.png" alt="Neck Pain" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Neck Pain
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/shoulder.png" alt="Frozen Shoulder" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Frozen Shoulder
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/foot.png" alt="Plantar Fasciitis" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Plantar Fasciitis
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/office-syndrome.png" alt="Poor Posture" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Poor Posture
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Button variant="contained" style={{backgroundColor: "transparent"}}>
-            <img src="/conditions/scar-tissue.png" alt="Scar Tissue" style={{width: "100%", height: "auto"}} />
-          </Button>
-          <Typography variant="body" sx={{pt:"20px", textAlign: "center"}}>
-            Scar Tissue
-          </Typography>
-        </Grid>
-      </Grid> */}
+        </Container>
+      </Box>
+      <TestimonialsCarousel/>
       </Container>
     </Typography>
   );

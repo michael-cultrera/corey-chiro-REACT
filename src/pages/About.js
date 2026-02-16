@@ -21,7 +21,7 @@ export default function About() {
         <img src="images/sample1.jpeg" alt="Network Spinal Analysis" style={{ width: "100%", height: "auto" }} />
       </Box>
       <Box sx={{backgroundColor: "var(--dark-green)", py: 5}}>
-        <Typography variant="header" sx={{ pb: 5, textAlign: "center" }}>
+        <Typography variant="header" sx={{ pb: 2, textAlign: "center" }}>
           About Dr. Corey Cultrera
         </Typography>
         <Box sx={{height: "100%", width: "100%", display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center", justifyContent: "center", px: "40px", gap: "50px"}}>
