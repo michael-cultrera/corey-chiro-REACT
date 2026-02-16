@@ -120,53 +120,54 @@ export default function Home() {
       <Typography variant="header" sx={{ mb: 1 }}>
         Conditions We Commonly Treat
       </Typography>
-
-      <Typography variant="body2" sx={{ color: "text.secondary", mb: 4 }}>
+      <Typography variant="body" sx={{ color: "text.secondary", mb: 4 }}>
         Whether you're dealing with chronic discomfort or a recent injury, 
         we provide personalized care designed to restore movement and reduce pain.
       </Typography>
-
       <Grid container spacing={2} justifyContent="center">
         {[
-          {label: "Back Pain", icon: "/images/back_pain.png"},
+          {label: "Back Pain", icon: "images/back_pain.png"},
           {label: "Neck Pain", icon: "/images/neck_pain.png"},
-          {label: "Headaches & Migraines", icon: "/images/headaches_migraines.png"},
-          {label: "Sciatica", icon: "/images/sciatica.png"},
+          {label: "Headaches & Migraines", icon: "/images/headache.png"},
+          {label: "Plantar Fasciitis", icon: "/images/plantar_fasciitis.png"},
           {label: "Sports Injuries", icon: "/images/sports_injuries.png"},
-          {label: "Postural Strain", icon: "/images/postural_strain.png"},
+          {label: "Postural Strain", icon: "/images/posture.png"},
           {label: "Shoulder Pain", icon: "/images/shoulder_pain.png"},
           {label: "Knee Pain", icon: "/images/knee_pain.png"},
         ].map((condition) => (
-          <Grid item xs={6} sm={4} md={3} key={condition}>
+          <Grid item xs={6} sm={4} md={3} key={condition.label}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 1,
+              py: 1.5,
+              px: 2,
+              borderRadius: "30px",
+              border: "1px solid",
+              borderColor: "grey.300",
+              fontSize: 14,
+              fontWeight: 500,
+              bgcolor: "white",
+            }}
+          >
             <Box
+              component="img"
+              src={condition.icon}
+              alt={condition.label}
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 1,
-                py: 1.5,
-                px: 2,
-                borderRadius: "30px",
-                border: "1px solid",
-                borderColor: "grey.300",
-                fontSize: 14,
-                fontWeight: 500,
-                bgcolor: "white",
+                width: 100,
+                height: 100,
+                objectFit: "contain",
               }}
-            >
-              <condition.icon size={18} strokeWidth={1.5} />
-              {condition.label}
-            </Box>
-          </Grid>
+            />
+            <Typography variant="body">{condition.label}</Typography>
+          </Box>
+        </Grid>
         ))}
       </Grid>
-
-      <Box sx={{ mt: 4 }}>
-        <FilledButton
-          buttonText="See All Services"
-          onClick={() => (window.location.href = "/services")}
-        />
-      </Box>
     </Box>
   </Container>
 </Box>
