@@ -1,10 +1,20 @@
-import { Typography, Container, Box } from "@mui/material";
+import { Typography, Container, Box, Divider } from "@mui/material";
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 export default function Services() {
   return (
     <Typography>
         <Container>
+        <Typography variant="header" sx={{textAlign: "center", mt: 2}}>Our Services</Typography>
+        <Divider
+            sx={{
+            width: 60,
+            mx: "auto",
+            mb: 5,
+            borderColor: "black",
+            borderBottomWidth: 3,
+            }}
+        />
         <Box sx={{ backgroundColor: "var(--light-green)", p: 3}}>
             <Typography variant="header">Network Spinal Analysis (NSA) Treatment</Typography>
             <Typography variant="body">Network Spinal Analysis (NSA) is a gentle, non-invasive approach that helps
@@ -23,6 +33,15 @@ export default function Services() {
                 </ul>
             </Typography>
         </Box>
+        <Divider
+            sx={{
+            width: 60,
+            mx: "auto",
+            my: 4,
+            borderColor: "black",
+            borderBottomWidth: 3,
+            }}
+        />
         <Box sx={{ backgroundColor: "var(--dark-green)", p: 3}}>
             <Typography variant="header">Shockwave Therapy</Typography>
             <Typography variant="body">Shockwave Therapy is a non-invasive, evidence-based treatment designed to relieve pain, 
@@ -68,6 +87,15 @@ export default function Services() {
                 </Typography>
             </Box>
         </Box>
+        <Divider
+            sx={{
+            width: 60,
+            mx: "auto",
+            my: 4,
+            borderColor: "black",
+            borderBottomWidth: 3,
+            }}
+        />
         <Box sx={{ backgroundColor: "var(--light-green)", p: 3}}>
             <Typography variant="header">Therapeutic Ultrasound for Chronic Pain Relief</Typography>
             <Typography variant="body">Therapeutic Ultrasound is a non-invasive treatment used to reduce chronic pain, inflammation,
@@ -87,6 +115,15 @@ export default function Services() {
                 </ul>
             </Typography>
         </Box>
+        <Divider
+            sx={{
+            width: 60,
+            mx: "auto",
+            my: 4,
+            borderColor: "black",
+            borderBottomWidth: 3,
+            }}
+        />
         <Box sx={{ backgroundColor: "var(--dark-green)", p: 3}}>
             <Typography variant="header">Instrument-Assisted Mechanical Spine Adjustments</Typography>
             <Typography variant="body">Instrument-assisted mechanical spine adjustments offer a gentle, wellness-centered approach

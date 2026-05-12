@@ -1,6 +1,6 @@
 import { Button, Typography } from "@mui/material";
 
-export default function OutlinedButton({ buttonText, onClick }) {
+export default function OutlinedButton({ buttonText, fontColor, fontColorHover, borderColor, onClick }) {
   return (
     <Button
         onClick={onClick}
@@ -8,14 +8,14 @@ export default function OutlinedButton({ buttonText, onClick }) {
         sx={{
             flexDirection: "column",
             textTransform: "none",
-            color: "black",
+            color: fontColor,
             borderRadius: "10px",
-            borderColor: "black",
+            borderColor: borderColor,
             transition: "background-color 0.3s ease, color 0.3s ease",
             '&:hover': {
-            borderColor: "black",
-            backgroundColor: "black",
-            color: "var(--honeydew)"
+            borderColor: borderColor,
+            backgroundColor: borderColor,
+            color: fontColorHover,
             }
         }}
         >

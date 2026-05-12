@@ -33,43 +33,66 @@ export default function TestimonialsCarousel() {
   const testimonials = [
     {
       text:
-        "I had persistent neck pain for years — after a few sessions I noticed a huge difference. Friendly staff and real results.",
-      name: "Sarah M.",
-      role: "Runner",
-      avatar: "/images/testimonial1.jpg",
+        "Dr. Corey is able to sort through my anecdotal isuues and what he feels in my body, to provide effective chiropractic and physiotherapeutic therapies to keep me flexible and balanced. He incorporates a toolbox of technologies in his office to provide the best-established approach for remedy. I highly recommend Dr. Corey.",
+      name: "David Rayburn",
+      avatar: "/review_avatars/david.png",
       rating: 5,
     },
     {
       text:
-        "Professional and gentle. They explained everything and gave me exercises I still use. Highly recommend!",
-      name: "David L.",
-      role: "Warehouse Supervisor",
-      avatar: "/images/testimonial2.jpg",
+        "Dr Corey is amazing. He has helped me with my back issues and I have no complaints. Highly recommend him.",
+      name: "SASAces",
+      avatar: "/review_avatars/sasaces.png",
       rating: 5,
     },
     {
       text:
-        "Great experience — booking was simple and the receptionist was kind. The treatments actually helped my plantar fasciitis.",
-      name: "Jasmine K.",
-      role: "Teacher",
-      avatar: "/images/testimonial3.jpg",
-      rating: 4,
+        "Dr. Cultrera is very knowledgeable and passionate about his profession. He is a kind and compassionate doctor who truly cares about his patients. He has helped me with my knee, back and shoulder pain. I would highly recommend him to anyone.",
+      name: "Rosa Scoddo-Sessa",
+      avatar: "/review_avatars/rose.png",
+      rating: 5,
     },
     {
       text:
-        "Great experience — booking was simple and the receptionist was kind. The treatments actually helped my plantar fasciitis.",
-      name: "Jasmine K.",
-      role: "Teacher",
-      avatar: "/images/testimonial3.jpg",
-      rating: 4,
+        "Dr Corey Cultrera and his staff are amazing. A very professional, friendly, and welcoming office. I highly recommend him for your back issues.",
+      name: "Tier One Armament",
+      avatar: "/review_avatars/tier one.png",
+      rating: 5,
     },
     {
       text:
-        "Great experience — booking was simple and the receptionist was kind. The treatments actually helped my plantar fasciitis.",
-      name: "Jasmine K.",
-      role: "Teacher",
-      avatar: "/images/testimonial3.jpg",
-      rating: 4,
+        "Awesome service, courteous and knowledgeable. Highly recommend!!",
+      name: "Nana Lee",
+      avatar: "/review_avatars/nana.png",
+      rating: 5,
+    },
+    {
+      text:
+        "Had major back issues and Corey and his staff solved my issues within 2 visits. Professional and clean.",
+      name: "Domenic Vigliatore",
+      avatar: "/review_avatars/dom.png",
+      rating: 5,
+    },
+    {
+      text:
+        "Had pain after running a half marathon. Came to see Dr. Corey and felt great after. The office is very clean and well organized as well.",
+      name: "giancarlo sessa",
+      avatar: "/review_avatars/giancarlo.png",
+      rating: 5,
+    },
+    {
+      text:
+        "I always feel immediate relief, followed by general improvement over the following days and weeks. It's great help, I highly recommend Dr. Corey and the Kinect Wellness Clinic.",
+      name: "Balloon Buster",
+      avatar: "/review_avatars/balloon.png",
+      rating: 5,
+    },
+    {
+      text:
+        "Dr. Corey blends the best of classic and modern chiropractic techniques, along with sports injury rehab and smart tools/devices.",
+      name: "KB",
+      avatar: "/review_avatars/kb.png",
+      rating: 5,
     },
   ];
 
@@ -256,9 +279,6 @@ export default function TestimonialsCarousel() {
                       <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
                         {t.name}
                       </Typography>
-                      <Typography variant="caption" sx={{ color: "text.secondary", display: "block" }}>
-                        {t.role}
-                      </Typography>
                     </Box>
                     <Box sx={{ textAlign: "right" }}>
                       <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
@@ -274,7 +294,6 @@ export default function TestimonialsCarousel() {
 
           <Stack direction="row" spacing={2} justifyContent="center" sx={{ mt: 4 }}>
             <FilledButton buttonText="Book An Appointment" onClick={() => (window.location.href = "/book-appointment")} />
-            <OutlinedButton buttonText="Read More Reviews" onClick={() => (window.location.href = "/about")} />
           </Stack>
         </Box>
       </Container>

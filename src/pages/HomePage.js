@@ -13,7 +13,7 @@ export default function Home() {
       <Box sx={{ position: 'relative' }}>
         <Box
           component="img"
-          src="/images/home_page_photo.png"
+          src="/images/landing.png"
           alt="Home Page Image"
           sx={{
             height: "550px",
@@ -77,27 +77,31 @@ export default function Home() {
                       onClick={() => window.location.href = item.nav}
                       aria-label={`Learn more about ${item.title}`}
                       sx={{
-                        width: 180,
-                        height: 180,
-                        borderRadius: "10px",
-                        overflow: "hidden",
-                        display: "inline-flex",
+                        display: "flex",
+                        flexDirection: "column",
                         alignItems: "center",
-                        justifyContent: "center",
-                        mb: 1.5,
-                        bgcolor: "background.paper",
+                        transition: "color 0.2s",
+                        "&:hover": { color: "var(--dark-green)" },
                       }}
                     >
                       <Box
                         component="img"
                         src={item.icon}
                         alt={item.title ?? ""}
-                        sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                        sx={{
+                          width: 180,
+                          height: 180,
+                          borderRadius: "10px",
+                          overflow: "hidden",
+                          objectFit: "cover",
+                          display: "block",
+                          mb: 1.5,
+                        }}
                       />
+                      <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+                        {item.title}
+                      </Typography>
                     </ButtonBase>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                      {item.title}
-                    </Typography>
                   </Paper>
                 </Grid>
               ))}
@@ -109,6 +113,9 @@ export default function Home() {
               />
               <OutlinedButton
                 buttonText="Learn More"
+                fontColor={"#093C5D"}
+                fontColorHover={"#F7FAFA"}
+                borderColor={"#093C5D"}
                 onClick={() => (window.location.href = "/about")}
               />
             </Stack>
@@ -118,12 +125,8 @@ export default function Home() {
       <Box sx={{ my: 8, bgcolor: "var(--dark-green)", py: 6 }}>
         <Container>
           <Box sx={{ maxWidth: 1000, mx: "auto", textAlign: "center", px: 2 }}>
-            <Typography variant="header" sx={{ mb: 1 }}>
+            <Typography variant="header" sx={{ mb: 1, color: "#F7FAFA" }}>
               Conditions We Commonly Treat
-            </Typography>
-            <Typography variant="body" sx={{ color: "text.secondary", mb: 4 }}>
-              Whether you're dealing with chronic discomfort or a recent injury, 
-              we provide personalized care designed to restore movement and reduce pain.
             </Typography>
             <Grid container spacing={2} justifyContent="center">
               {[
@@ -147,11 +150,10 @@ export default function Home() {
                     py: 1.5,
                     px: 2,
                     borderRadius: "30px",
-                    border: "1px solid",
-                    borderColor: "grey.300",
                     fontSize: 14,
                     fontWeight: 500,
-                    bgcolor: "white",
+                    bgcolor: "#3B7597",
+                    color: "#F7FAFA"
                   }}
                 >
                   <Box

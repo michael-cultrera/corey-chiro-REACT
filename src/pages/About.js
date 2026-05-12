@@ -1,37 +1,38 @@
-import { Typography, Grid, Box, Divider } from "@mui/material";
+import { Typography, Box, Divider } from "@mui/material";
 import FilledButton from "../components/FilledButton";
-import { Container } from "@mui/system";
+import { Container, fontFamily } from "@mui/system";
+import OutlinedButton from "../components/OutlinedButton";
 
 const techniques = [
   {
     title: "Network Spinal Analysis",
-    image: "images/network.jpeg",
+    image: "images/network.png",
     description:
       "This gentle technique uses light touches along the spine to send signals to the brain, helping the body release built-up tension in the spinal cord, nerves, muscles, and tendons. Patients may feel relaxed, experience deep breaths, muscle movement, or shifts in tension.",
   },
   {
     title: "Neuromechanical Impulse Adjusting",
-    image: "images/sample1.jpeg",
+    image: "images/impulse_adjusting.png",
     description:
       "This technique uses a device to deliver precise thrusts to restricted joints, improving mobility and reducing pain caused by tension and poor body mechanics.",
   },
   {
     title: "Myofascial Release",
-    image: "images/sample1.jpeg",
+    image: "images/myofascial_release.jpg",
     description:
       "Myofascial Release relieves tight muscles through patient movements and practitioner guidance, similar to deep tissue massage but more targeted. Gua Sha tools may also be used to release muscle adhesions and realign tissues.",
   },
   {
     title: "Therapeutic Ultrasound",
-    image: "images/sample1.jpeg",
+    image: "images/ultrasound.png",
     description:
       "Therapeutic ultrasound uses sound waves to break down scar tissue from injuries or strain. The vibrations create heat, boosting blood flow and aiding the body's natural healing process.",
   },
   {
-    title: "Exercise Prescription",
-    image: "images/sample1.jpeg",
+    title: "Shockwave Therapy",
+    image: "images/shockwave.jpeg",
     description:
-      "Exercise prescriptions help maintain alignment and stability after releasing tension, ensuring muscles fire correctly for efficient movement.",
+      "Shockwave therapy (Extracorporeal Shockwave Therapy - ESWT) is a non-invasive, non-surgical treatment that uses high-energy acoustic waves to treat chronic, stubborn soft tissue and bone injuries.",
   },
 ];
 
@@ -94,7 +95,7 @@ export default function About() {
         >
           <Box
             component="img"
-            src="images/sample1.jpeg"
+            src="images/sunset.jpg"
             alt="Network Spinal Analysis"
             sx={{
               width: "100%",
@@ -119,19 +120,14 @@ export default function About() {
               py: { xs: 3, md: 5 },
             }}
           >
-            <Typography
-              variant="header"
-              sx={{
-                pb: 0, //since header is default to padding on bottom, change this so header has 0 padding on bottom
-              }}
-            >
+            <Typography variant="header">
               Our Mission
             </Typography>
             <Divider
               sx={{
                 width: 60,
                 mx: "auto",
-                my: 3,
+                mb: 5,
                 borderColor: "black",
                 borderBottomWidth: 3,
               }}
@@ -143,13 +139,16 @@ export default function About() {
                 lineHeight: 1.4,
               }}
             >
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              Our mission is to improve the health and quality of life of our community and
+              families through personalized, compassionate, and evidence-based chiropractic
+              care. We focus on restoring balance to the body, relieving pain, and empowering
+              patients with the knowledge and tools to live healthier, more active lives.
             </Typography>
           </Box>
         </Container>
       </Box>
-      <Box sx={{backgroundColor: "var(--dark-green)", py: 5}}>
-        <Typography variant="header" sx={{ pb: 2, textAlign: "center", }}>
+      <Box sx={{backgroundColor: "var(--dark-green)", py: 5, color: "#F7FAFA"}}>
+        <Typography variant="header" sx={{ pb: 2, textAlign: "center",}}>
           About Dr. Corey Cultrera
         </Typography>
         <Box sx={{height: "100%", width: "100%", display: "flex", flexDirection: {xs: "column", md: "row"}, alignItems: "center", justifyContent: "center", px: "40px", gap: "50px"}}>
@@ -176,12 +175,32 @@ export default function About() {
       </Box>
       <Box sx={{ pt: { xs: 6, md: 10 }, pb: { xs: 4, md: 8 }, px: { xs: 2, md: 6 } }}>
       <Typography
-        variant="h4"
-        sx={{ textAlign: "center", fontWeight: 700, mb: 5 }}
+        variant="header"
+        sx={{ textAlign: "center", fontWeight: 700 }}
       >
         Our Techniques
       </Typography>
-      {techniques.map((technique, index) => (
+      <Divider
+        sx={{
+          width: 60,
+          mx: "auto",
+          mb: 5,
+          borderColor: "black",
+          borderBottomWidth: 3,
+        }}
+      />
+      {techniques.map((technique, index) => {
+        const isLight = index % 2 === 0;
+      
+        const bgColor = isLight
+          ? "var(--light-green)"
+          : "var(--dark-green)";
+
+        const textColor = isLight
+          ? "#000000"
+          : "#F7FAFA";
+
+      return (
         <Box
           key={technique.title}
           sx={{
@@ -196,29 +215,44 @@ export default function About() {
             src={technique.image}
             alt={technique.title}
             sx={{
-              width: { xs: "100%", md: "40%" },
-              height: 250,
-              objectFit: "cover",
+              width: "100%",
+              maxWidth: {xs: "300px", sm: "450px", md: "500px"},
+              height: "auto",
+              mx: { xs: "auto", md: 0 },
               boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
             }}
           />
           <Box
             sx={{
               flex: 1,
-              backgroundColor: "var(--light-green)",
-              p: 3,
-              display: "inline-block",
+              backgroundColor: bgColor,
+              padding: 2,
             }}
           >
-            <Typography variant="h6" fontWeight={600} gutterBottom>
+            <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', color: textColor}}>
               {technique.title}
             </Typography>
-            <Typography variant="body" sx={{ lineHeight: 1.6 }}>
+            <Typography variant="body" sx={{ lineHeight: 1.6, mb: 2, color: textColor}}>
               {technique.description}
             </Typography>
+            <Box
+              sx={{
+                mt: "auto",
+                display: "flex",
+                justifyContent: "flex-end",
+                height: "25px",
+              }}
+            >
+              <OutlinedButton
+                fontColor={textColor}
+                fontColorHover={bgColor}
+                borderColor={textColor}
+                buttonText={"Learn More"} onClick={() => {window.location.href = "/services"}}
+              />
+            </Box>
           </Box>
         </Box>
-      ))}
+      )})}
         </Box>
       </Container>
     </Typography>

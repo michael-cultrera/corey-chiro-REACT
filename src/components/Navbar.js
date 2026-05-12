@@ -135,7 +135,7 @@ export default function Navbar() {
                     onClick={handleNavClick(href)}
                     underline="none"
                     sx={{
-                      color: "var(--foreground-color)",
+                      color: "#F7FAFA",
                       transition: "color 0.2s",
                       "&:hover": { color: "var(--honeydew)" },
                       width: "100%",
@@ -201,7 +201,7 @@ export default function Navbar() {
                 href={href}
                 underline="none"
                 sx={{
-                  color: "var(--foreground-color)",
+                  color: "#F7FAFA",
                   transition: "color 0.2s",
                   "&:hover": { color: "var(--honeydew)" },
                   cursor: "pointer",
@@ -213,6 +213,9 @@ export default function Navbar() {
 
             <OutlinedButton
               buttonText={"Contact"}
+              fontColor={"#F7FAFA"}
+              fontColorHover={"#093C5D"}
+              borderColor={"#F7FAFA"}
               onClick={() => (window.location.href = "/contact-us")}
             />
           </Stack>
