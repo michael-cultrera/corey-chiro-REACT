@@ -19,7 +19,6 @@ import OutlinedButton from "./OutlinedButton";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/patient-forms", label: "Patient Forms" },
   { href: "/book-appointment", label: "Book An Appointment" },
   { href: "/services", label: "Services" },
 ];
@@ -101,7 +100,7 @@ export default function Navbar() {
                   right: 16,
                   top: "50%",
                   transform: "translateY(-50%)",
-                  color: "inherit",
+                  color: "#F7FAFA",
                 }}
               >
                 {menuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -150,10 +149,10 @@ export default function Navbar() {
                 <Box sx={{ width: "100%", display: "flex", justifyContent: "flex-end" }}>
                   <OutlinedButton
                     buttonText={"Contact"}
-                    onClick={() => {
-                      handleClose();
-                      window.location.href = "/contact-us";
-                    }}
+                    fontColor={"#F7FAFA"}
+                    fontColorHover={"#093C5D"}
+                    borderColor={"#F7FAFA"}
+                    onClick={() => (window.location.href = "/contact-us")}
                   />
                 </Box>
               </Stack>

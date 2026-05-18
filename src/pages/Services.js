@@ -16,7 +16,7 @@ export default function Services() {
             }}
         />
         <Box sx={{ backgroundColor: "var(--light-green)", p: 3}}>
-            <Typography variant="header">Network Spinal Analysis (NSA) Treatment</Typography>
+            <Typography id="nsa" variant="header">Network Spinal Analysis (NSA) Treatment</Typography>
             <Typography variant="body">Network Spinal Analysis (NSA) is a gentle, non-invasive approach that helps
                 your body release tension and stress while supporting overall spinal and nervous system health. Using precise, 
                 light touch along the spine, NSA promotes relaxation, improves energy flow, and enhances your body’s ability to adapt to stress.
@@ -42,8 +42,8 @@ export default function Services() {
             borderBottomWidth: 3,
             }}
         />
-        <Box sx={{ backgroundColor: "var(--dark-green)", p: 3}}>
-            <Typography variant="header">Shockwave Therapy</Typography>
+        <Box sx={{ backgroundColor: "var(--dark-green)", color: "#F7FAFA", p: 3}}>
+            <Typography id="shockwave-therapy" variant="header">Shockwave Therapy</Typography>
             <Typography variant="body">Shockwave Therapy is a non-invasive, evidence-based treatment designed to relieve pain, 
                 improve mobility, and accelerate the body’s natural healing process. It is commonly used for chronic musculoskeletal 
                 conditions, soft tissue injuries, and areas of pain that have not responded well to traditional care. <br/><br/>
@@ -124,8 +124,8 @@ export default function Services() {
             borderBottomWidth: 3,
             }}
         />
-        <Box sx={{ backgroundColor: "var(--dark-green)", p: 3}}>
-            <Typography variant="header">Instrument-Assisted Mechanical Spine Adjustments</Typography>
+        <Box sx={{ backgroundColor: "var(--dark-green)", color: "#F7FAFA", p: 3, mb: 2,}}>
+            <Typography id="mechanical" variant="header">Instrument-Assisted Mechanical Spine Adjustments</Typography>
             <Typography variant="body">Instrument-assisted mechanical spine adjustments offer a gentle, wellness-centered approach
                 to supporting spinal health and overall balance in the body. Using a specialized handheld instrument, precise and
                 controlled impulses are applied to areas of the spine that need support, encouraging proper movement and alignment 

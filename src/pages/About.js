@@ -7,12 +7,14 @@ const techniques = [
   {
     title: "Network Spinal Analysis",
     image: "images/network.png",
+    headingID: "nsa",
     description:
       "This gentle technique uses light touches along the spine to send signals to the brain, helping the body release built-up tension in the spinal cord, nerves, muscles, and tendons. Patients may feel relaxed, experience deep breaths, muscle movement, or shifts in tension.",
   },
   {
     title: "Neuromechanical Impulse Adjusting",
     image: "images/impulse_adjusting.png",
+    headingID: "mechanical",
     description:
       "This technique uses a device to deliver precise thrusts to restricted joints, improving mobility and reducing pain caused by tension and poor body mechanics.",
   },
@@ -31,6 +33,7 @@ const techniques = [
   {
     title: "Shockwave Therapy",
     image: "images/shockwave.jpeg",
+    headingID: "shockwave-therapy",
     description:
       "Shockwave therapy (Extracorporeal Shockwave Therapy - ESWT) is a non-invasive, non-surgical treatment that uses high-energy acoustic waves to treat chronic, stubborn soft tissue and bone injuries.",
   },
@@ -232,7 +235,7 @@ export default function About() {
             <Typography variant="h6" gutterBottom sx={{fontWeight: 'bold', color: textColor}}>
               {technique.title}
             </Typography>
-            <Typography variant="body" sx={{ lineHeight: 1.6, mb: 2, color: textColor}}>
+            <Typography variant="body" sx={{ lineHeight: 1.6, mb: 2, color: `${textColor}CC`}}>
               {technique.description}
             </Typography>
             <Box
@@ -247,7 +250,8 @@ export default function About() {
                 fontColor={textColor}
                 fontColorHover={bgColor}
                 borderColor={textColor}
-                buttonText={"Learn More"} onClick={() => {window.location.href = "/services"}}
+                buttonText={"Learn More"} 
+                onClick={() => {window.location.href = `/services#${technique.headingID}`}}
               />
             </Box>
           </Box>

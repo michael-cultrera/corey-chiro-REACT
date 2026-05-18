@@ -9,7 +9,7 @@ export default function FilledButton({ buttonText, onClick }) {
             height: "50px",
             flexDirection: "column",
             textTransform: "none",
-            color: "var(--honeydew)",
+            color: "#F7FAFA",
             backgroundColor: "var(--dark-green)",
             borderRadius: "10px",
             borderColor: "var(--dark-green)",
@@ -17,7 +17,6 @@ export default function FilledButton({ buttonText, onClick }) {
             '&:hover': {
             borderColor: "black",
             backgroundColor: "black",
-            color: "var(--honeydew)"
             }
         }}
     >

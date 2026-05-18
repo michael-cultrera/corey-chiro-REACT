@@ -10,7 +10,7 @@ export default function ContactUs() {
         <Box sx={{px: "20px", pt: "20px"}}>
           <Typography variant="header">Our Office</Typography>
           <Typography variant="body">
-            <a href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2N2" target="_blank" rel="noopener noreferrer" style={{ color: "var(--link-color)" }}>
+            <a href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2N2" target="_blank" rel="noopener noreferrer" style={{ color: "#3B7597" }}>
               2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2N2
             </a>
           </Typography>
@@ -34,7 +34,7 @@ export default function ContactUs() {
             <Typography variant="header">Contact Info</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>
               Phone:{" "}
-              <a href="tel:416-497-8585" style={{ color: "var(--link-color)" }}>
+              <a href="tel:416-497-8585" style={{ color: "#3B7597" }}>
                 416-497-8585
               </a>
             </Typography>
@@ -42,7 +42,7 @@ export default function ContactUs() {
               Email:{" "}
               <a
                 href="mailto:corey.cultrera@gmail.com"
-                style={{ color: "var(--link-color)" }}
+                style={{ color: "#3B7597" }}
               >
                 dr.coreycultrera@gmail.com
               </a>

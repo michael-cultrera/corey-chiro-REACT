@@ -92,19 +92,6 @@ function Footer() {
                     <Typography variant="body" sx={{pb: 1}}>About</Typography>
                 </Link>
                 <Link
-                    href="/patient-forms"
-                    sx={{
-                        color: "var(--foreground-color)",
-                        textDecoration: "none",
-                        transition: "color 0.3s ease",
-                        '&:hover': {
-                        color: "var(--dark-green)"
-                        },
-                    }}
-                    >
-                    <Typography variant="body" sx={{pb: 1}}>Patient Forms</Typography>
-                </Link>
-                <Link
                     href="/book-appointment"
                     sx={{
                         color: "var(--foreground-color)",

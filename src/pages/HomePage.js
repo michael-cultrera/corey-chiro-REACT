@@ -96,6 +96,7 @@ export default function Home() {
                           objectFit: "cover",
                           display: "block",
                           mb: 1.5,
+                          boxShadow: 1,
                         }}
                       />
                       <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>

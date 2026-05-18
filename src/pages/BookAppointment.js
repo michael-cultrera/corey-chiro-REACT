@@ -1,5 +1,6 @@
 import { Box, Typography, Container, TableContainer, Paper, Table, TableBody, TableRow, TableCell } from "@mui/material";
 import FilledButton from "../components/FilledButton";
+import DownloadIcon from '@mui/icons-material/Download';
 
 export default function BookAppointment() {
   return (
@@ -7,9 +8,9 @@ export default function BookAppointment() {
       <Container>
         <Box sx={{px: "20px", pt: "20px"}}>
         <Typography variant="header">Book An Appointment</Typography>
-        <Typography variant="body" sx={{pb: 1}}>
+        <Typography variant="body" sx={{pb: 1, mr: { md: 35 }}}>
           To book an initial exam/appointment with Dr. Corey Cultrera please call{" "}
-          <a href="tel:416-497-8585" style={{ color: "var(--link-color)" }}>
+          <a href="tel:416-497-8585" style={{ color: "#3B7597" }}>
             416-497-8585
           </a>{" "}
           and the front desk staff will be happy to help. Initial appointments
@@ -23,15 +24,31 @@ export default function BookAppointment() {
           }}
         >
           <Typography variant="header">Initial Exams</Typography>
-          <Typography variant="body" sx={{pb: 1}}>
-            Prior to your initial exam you can{" "}
-            <a href="/patient-forms" style={{ color: "var(--link-color)" }}>
-              download the new patient forms here
-            </a>{" "}
+          <Typography variant="body" sx={{pb: 1, mr: { md: 35 }}}>
+            Prior to your initial exam you can download the new patient forms below
             and bring them to your initial exam or please arrive 15-20 minutes
             early to fill them out.
           </Typography>
-          <FilledButton buttonText="Download Patient Forms" onClick={() => {window.location.href = "/patient-forms"}}/>
+          <FilledButton 
+          buttonText={
+            <>
+              Download Patient Forms 
+              <Box
+                component="span"
+                sx={{ ml: 1 }}
+              >
+                <DownloadIcon fontSize="small" />
+              </Box>
+            </>
+          } 
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "/patient_forms/new_patient_form.pdf";
+            link.download = "new-patient-form.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}/>
         </Box>
         <Box
           sx={{
@@ -51,8 +68,8 @@ export default function BookAppointment() {
           <Box sx={{ width: { xs: '100%', sm: 600 }, maxWidth: '100%', pb: 5, overflowX: 'auto' }}>
           <TableContainer component={Paper}>
             <Table sx={{backgroundColor: "var(--dark-green)", "& .MuiTableCell-root": {
-      color: "var(--honeydew)",
-    },}}>
+              color: "#F7FAFA",
+            },}}>
               <TableBody>
                   <TableRow>
                     <TableCell scope="row">

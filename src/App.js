@@ -9,7 +9,6 @@ import "./index.css";
 import HomePage from "./pages/HomePage";
 import ContactUs from "./pages/ContactUs";
 import BookAppointment from "./pages/BookAppointment";
-import PatientForms from "./pages/PatientForms";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import CallIcon from '@mui/icons-material/Call';
@@ -70,7 +69,6 @@ export default function RootLayout({ children }) {
               <Route path="/about" element={<About />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/book-appointment" element={<BookAppointment />} />
-              <Route path="/patient-forms" element={<PatientForms />} />
               <Route path="/services" element={<Services />} />
             </Routes>
             <Footer/>
