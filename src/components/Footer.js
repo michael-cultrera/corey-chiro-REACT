@@ -15,10 +15,10 @@ function Footer() {
             px: 5,
             pt: 4,
         }}>
-        <Box sx={{display: "flex", gap: 20}}>
+        <Box sx={{display: {sm: "flex"}, gap: 20}}>
             <Box>
                 <Box sx={{pb: 3}}>
-                    <Logo width="120px"/>
+                    <Logo/>
                 </Box>
                 <Box sx={{ width: 'fit-content' }}>
                     <LinkWithIcon 
@@ -42,7 +42,7 @@ function Footer() {
                     >
                     <Typography variant="body" sx={{pb: 3, pt: 1,}}>2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2N2</Typography>
                 </Link>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '50%'}}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', width: "180px"}}>
                     <Box>
                         <Typography variant="body" sx={{ pb: 1 }}>Monday</Typography>
                         <Typography variant="body" sx={{ pb: 1 }}>Tuesday</Typography>
@@ -52,18 +52,18 @@ function Footer() {
                         <Typography variant="body" sx={{ pb: 1 }}>Saturday</Typography>
                         <Typography variant="body">Sunday</Typography>
                     </Box>
-                    <Box>
+                    <Box sx={{ whiteSpace: 'nowrap'}}>
                         <Typography variant="body" sx={{ pb: 1 }}>Closed</Typography>
                         <Typography variant="body" sx={{ pb: 1 }}>9:45-6pm</Typography>
                         <Typography variant="body" sx={{ pb: 1 }}>Closed</Typography>
                         <Typography variant="body" sx={{ pb: 1 }}>9:45-6pm</Typography>
                         <Typography variant="body" sx={{ pb: 1 }}>9:45-3pm</Typography>
-                        <Typography variant="body" sx={{ pb: 1 }}>9:30-3pm</Typography>
+                        <Typography variant="body" sx={{ pb: 1}}>9:30-3pm</Typography>
                         <Typography variant="body">Closed</Typography>
                     </Box>
                 </Box>
             </Box>
-            <Box>
+            <Box sx={{pt: {xs: 5, sm: 0}}}>
                 <Typography variant="header_2">Links</Typography>
                 <Link
                     href="/"
@@ -90,19 +90,6 @@ function Footer() {
                     }}
                     >
                     <Typography variant="body" sx={{pb: 1}}>About</Typography>
-                </Link>
-                <Link
-                    href="/patient-forms"
-                    sx={{
-                        color: "var(--foreground-color)",
-                        textDecoration: "none",
-                        transition: "color 0.3s ease",
-                        '&:hover': {
-                        color: "var(--dark-green)"
-                        },
-                    }}
-                    >
-                    <Typography variant="body" sx={{pb: 1}}>Patient Forms</Typography>
                 </Link>
                 <Link
                     href="/book-appointment"

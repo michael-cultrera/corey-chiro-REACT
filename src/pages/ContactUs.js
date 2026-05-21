@@ -7,31 +7,34 @@ export default function ContactUs() {
   return (
     <Container>
       <Typography>
-        <Typography variant="header">Location</Typography>
-        <Typography variant="body">
-          <a href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2N2" target="_blank" rel="noopener noreferrer" style={{ color: "var(--link-color)" }}>
-            2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2N2
-          </a>
-        </Typography>
-        <MapBoxMap />
+        <Box sx={{px: "20px", pt: "20px"}}>
+          <Typography variant="header">Our Office</Typography>
+          <Typography variant="body">
+            <a href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2N2" target="_blank" rel="noopener noreferrer" style={{ color: "#3B7597" }}>
+              2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2N2
+            </a>
+          </Typography>
+          <MapBoxMap />
+        </Box>
         <Box
           sx={{
             pt: 5,
             display: { xs: "block", md: "flex" },
+            px: { xs: "20px" },
             justifyContent: "space-around",
           }}
         >
-          <Box>
+          <Box sx={{ pb: { xs: 4, md: 0 } }}>
             <Typography variant="header">Hours of Operation</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>Monday - Friday: 9:00 AM - 5:00 PM</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>Saturday: 9:00 AM - 1:00 PM</Typography>
             <Typography variant="body">Sunday: Closed</Typography>
           </Box>
-          <Box>
+          <Box sx={{ pb: { xs: 4, md: 0 } }}>
             <Typography variant="header">Contact Info</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>
               Phone:{" "}
-              <a href="tel:416-497-8585" style={{ color: "var(--link-color)" }}>
+              <a href="tel:416-497-8585" style={{ color: "#3B7597" }}>
                 416-497-8585
               </a>
             </Typography>
@@ -39,7 +42,7 @@ export default function ContactUs() {
               Email:{" "}
               <a
                 href="mailto:corey.cultrera@gmail.com"
-                style={{ color: "var(--link-color)" }}
+                style={{ color: "#3B7597" }}
               >
                 dr.coreycultrera@gmail.com
               </a>

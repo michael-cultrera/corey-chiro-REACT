@@ -1,16 +1,19 @@
-import * as React from "react";
 import { Box } from "@mui/material";
 
-export default function Logo(width) {
+export default function Logo() {
   return (
     <Box>
-      <a href="/" style={{ display: 'flex', width: 'fit-content' }}>
+      <a href="/" style={{ display: "flex", width: "fit-content" }}>
         <Box
           component="img"
-          src="/images/corey_logo.png"
+          src="/images/kinect_chiro_logo.png"
           alt="Dr. Corey Cultrera"
           sx={{
-            width: width,
+            width: {
+              xs: "65px",
+              sm: "75px",
+              md: "80px",
+            },
             objectFit: "contain",
           }}
         />
