@@ -5,6 +5,7 @@ export default function FilledButton({ buttonText, onClick }) {
     <Button
         onClick={onClick}
         variant="outlined"
+        type="submit"
         sx={{
             height: "50px",
             flexDirection: "column",

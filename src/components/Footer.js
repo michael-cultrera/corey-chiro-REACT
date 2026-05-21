@@ -18,7 +18,7 @@ function Footer() {
         <Box sx={{display: {sm: "flex"}, gap: 20}}>
             <Box>
                 <Box sx={{pb: 3}}>
-                    <Logo width="120px"/>
+                    <Logo/>
                 </Box>
                 <Box sx={{ width: 'fit-content' }}>
                     <LinkWithIcon 

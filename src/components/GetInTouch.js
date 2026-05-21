@@ -1,15 +1,56 @@
-import { Box, TextField, Button, Typography } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import FilledButton from "./FilledButton";
 
 const GetInTouch = () => {
-  const handleSubmit = (event) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Handle form submission logic here
+
+    try {
+      await emailjs.send(
+        "service_a2ywdzf",
+        "template_xigco3i",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "g50CaeZTMlf1-0D2L"
+      );
+
+      alert("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message.");
+    }
   };
 
   return (
-    <Box sx={{ pb: 5, }}>
-      <Typography variant="header" sx={{ textAlign: "center" }}>Get In Touch</Typography>
+    <Box sx={{ pb: 5 }}>
+      <Typography variant="header" sx={{ textAlign: "center" }}>
+        Get In Touch
+      </Typography>
+
       <form
         onSubmit={handleSubmit}
         style={{
@@ -18,70 +59,49 @@ const GetInTouch = () => {
           alignItems: "center",
         }}
       >
-        <Box sx={{ width: "100%", maxWidth: { xs: "200px", sm: "250px", md: "400px" } }}>
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: { xs: "200px", sm: "250px", md: "400px" },
+          }}
+        >
           <TextField
+            name="name"
             label="Name"
             margin="normal"
             required
             fullWidth
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                borderRadius: '20px',
-                '&:hover fieldset': {
-                  borderColor: 'var(--dark-green)',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'var(--dark-green)',
-                },
-              },
-              '& label.Mui-focused': {
-                color: 'var(--dark-green)',
-              },
-            }}
+            value={formData.name}
+            onChange={handleChange}
           />
+
           <TextField
+            name="email"
             label="Email"
             type="email"
             margin="normal"
             required
             fullWidth
-            sx={{
-              '& .MuiOutlinedInput-root': {
-                borderRadius: '20px',
-                '&:hover fieldset': {
-                  borderColor: 'var(--dark-green)',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'var(--dark-green)',
-                },
-              },
-              '& label.Mui-focused': {
-                color: 'var(--dark-green)',
-              },
-            }}
+            value={formData.email}
+            onChange={handleChange}
           />
         </Box>
+
         <TextField
+          name="message"
           label="Message"
           multiline
           rows={4}
           margin="normal"
           required
-          sx={{ width: { xs: "85%", sm: "70%", md: "500px" }, pb: 2, 
-             '& .MuiOutlinedInput-root': {
-                borderRadius: '20px',
-                '&:hover fieldset': {
-                  borderColor: 'var(--dark-green)',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'var(--dark-green)',
-                },
-              },
-              '& label.Mui-focused': {
-                color: 'var(--dark-green)',
-              },
-            }}
+          value={formData.message}
+          onChange={handleChange}
+          sx={{
+            width: { xs: "85%", sm: "70%", md: "500px" },
+            pb: 2,
+          }}
         />
+
         <FilledButton buttonText="Send Message" />
       </form>
     </Box>

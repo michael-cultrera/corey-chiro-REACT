@@ -186,7 +186,7 @@ export default function Navbar() {
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Logo width="120px" />
+            <Logo/>
           </Box>
 
           <Stack
