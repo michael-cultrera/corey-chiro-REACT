@@ -174,7 +174,7 @@ export default function TestimonialsCarousel() {
       window.removeEventListener("pointerup", onPointerUp);
       el.removeEventListener("scroll", onScroll);
     };
-  }, [visibleCount, pause]);
+  }, [visibleCount]);
 
   // arrow controls
   const scrollByCard = (direction = "next") => {
