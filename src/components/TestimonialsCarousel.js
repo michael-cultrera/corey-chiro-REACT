@@ -117,12 +117,12 @@ export default function TestimonialsCarousel() {
     }, AUTO_SCROLL_MS);
   };
 
-  const stopAutoScroll = () => {
+  const stopAutoScroll = useCallback(() => {
     if (autoRef.current) {
       clearInterval(autoRef.current);
       autoRef.current = null;
     }
-  };
+  },[]);
 
   const pause = useCallback((temporary = true) => {
     setIsPaused(true);
