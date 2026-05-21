@@ -12,7 +12,6 @@ import {
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import FilledButton from "../components/FilledButton";
-import OutlinedButton from "../components/OutlinedButton";
 
 export default function TestimonialsCarousel() {
   const theme = useTheme();
@@ -175,7 +174,7 @@ export default function TestimonialsCarousel() {
       window.removeEventListener("pointerup", onPointerUp);
       el.removeEventListener("scroll", onScroll);
     };
-  }, [visibleCount]);
+  }, [visibleCount, pause]);
 
   // arrow controls
   const scrollByCard = (direction = "next") => {

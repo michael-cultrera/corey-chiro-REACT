@@ -1,6 +1,6 @@
 import { Typography, Box, Divider } from "@mui/material";
 import FilledButton from "../components/FilledButton";
-import { Container, fontFamily } from "@mui/system";
+import { Container } from "@mui/system";
 import OutlinedButton from "../components/OutlinedButton";
 
 const techniques = [
