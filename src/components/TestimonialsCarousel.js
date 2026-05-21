@@ -133,7 +133,7 @@ export default function TestimonialsCarousel() {
         setIsPaused(false);
       }, RESUME_AFTER_MS);
     }
-  });
+  }, [stopAutoScroll]);
 
   useEffect(() => {
     if (!isPaused) startAutoScroll();
