@@ -146,7 +146,7 @@ export default function TestimonialsCarousel() {
       stopAutoScroll();
       if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
     };
-  }, []);
+  }, [stopAutoScroll]);
 
   // interaction handlers
   useEffect(() => {
