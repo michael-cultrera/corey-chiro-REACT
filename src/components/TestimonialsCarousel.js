@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Box,
   Container,
@@ -124,7 +124,7 @@ export default function TestimonialsCarousel() {
     }
   };
 
-  const pause = (temporary = true) => {
+  const pause = useCallback((temporary = true) => {
     setIsPaused(true);
     stopAutoScroll();
     if (temporary) {
@@ -133,7 +133,7 @@ export default function TestimonialsCarousel() {
         setIsPaused(false);
       }, RESUME_AFTER_MS);
     }
-  };
+  });
 
   useEffect(() => {
     if (!isPaused) startAutoScroll();
@@ -174,7 +174,7 @@ export default function TestimonialsCarousel() {
       window.removeEventListener("pointerup", onPointerUp);
       el.removeEventListener("scroll", onScroll);
     };
-  }, [visibleCount]);
+  }, [visibleCount, pause]);
 
   // arrow controls
   const scrollByCard = (direction = "next") => {
