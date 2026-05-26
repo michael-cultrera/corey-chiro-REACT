@@ -15,21 +15,24 @@ export default function Services() {
             borderBottomWidth: 3,
             }}
         />
-        <Box sx={{ backgroundColor: "var(--light-green)", p: 3}}>
-            <Typography id="nsa" variant="header">Network Spinal Analysis (NSA) Treatment</Typography>
-            <Typography variant="body">Network Spinal Analysis (NSA) is a gentle, non-invasive approach that helps
-                your body release tension and stress while supporting overall spinal and nervous system health. Using precise, 
-                light touch along the spine, NSA promotes relaxation, improves energy flow, and enhances your body’s ability to adapt to stress.
-                <br/><br/>This technique is safe and effective for anyone—from babies to seniors—and everyone in between.
+        <Box sx={{ backgroundColor: "var(--dark-green)", color: "#F7FAFA", p: 3, mb: 2,}}>
+            <Typography id="mechanical" variant="header">Instrument-Assisted Mechanical Spine Adjustments</Typography>
+            <Typography variant="body">Instrument-assisted mechanical spine adjustments offer a gentle, wellness-centered approach
+                to supporting spinal health and overall balance in the body. Using a specialized handheld instrument, precise and
+                controlled impulses are applied to areas of the spine that need support, encouraging proper movement and alignment 
+                without forceful twisting or cracking. <br/><br/>
+                his comfortable technique is designed to work with the body’s natural ability to heal and adapt. By improving joint
+                mobility and reducing areas of stress, instrument-assisted adjustments help support nervous system function, promote
+                relaxation, and enhance overall well-being. The light, consistent touch makes this approach ideal for individuals 
+                of all ages who are seeking a calm, effective, and restorative care experience.
             </Typography>
-            <Typography variant="body" sx={{ pt: 3,}}><strong>Benefits of NSA Include:</strong><br/><br/>
+            <Typography variant="body" sx={{ pt: 3,}}><strong>Benefits Include:</strong><br/><br/>
                 <ul>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Chronic pain relief</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Improved posture and spinal alignment</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Enhanced athletic performance</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Better sleep quality</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Increased energy levels</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Stress reduction and emotional well-being</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Gentle support for spinal alignment</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Improved mobility and flexibility</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Reduced physical stress and tension</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Enhanced comfort and relaxation</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> A safe, low-force option for ongoing wellness care</li>
                 </ul>
             </Typography>
         </Box>
@@ -42,7 +45,7 @@ export default function Services() {
             borderBottomWidth: 3,
             }}
         />
-        <Box sx={{ backgroundColor: "var(--dark-green)", color: "#F7FAFA", p: 3}}>
+        <Box sx={{ backgroundColor: "var(--light-green)", p: 3}}>
             <Typography id="shockwave-therapy" variant="header">Shockwave Therapy</Typography>
             <Typography variant="body">Shockwave Therapy is a non-invasive, evidence-based treatment designed to relieve pain, 
                 improve mobility, and accelerate the body’s natural healing process. It is commonly used for chronic musculoskeletal 
@@ -96,7 +99,7 @@ export default function Services() {
             borderBottomWidth: 3,
             }}
         />
-        <Box sx={{ backgroundColor: "var(--light-green)", p: 3}}>
+        <Box sx={{ backgroundColor: "var(--dark-green)", color: "#F7FAFA", p: 3}}>
             <Typography variant="header">Therapeutic Ultrasound for Chronic Pain Relief</Typography>
             <Typography variant="body">Therapeutic Ultrasound is a non-invasive treatment used to reduce chronic pain, inflammation,
                 and muscle tension. By delivering targeted sound waves deep into soft tissues, ultrasound helps improve circulation,
@@ -124,24 +127,21 @@ export default function Services() {
             borderBottomWidth: 3,
             }}
         />
-        <Box sx={{ backgroundColor: "var(--dark-green)", color: "#F7FAFA", p: 3, mb: 2,}}>
-            <Typography id="mechanical" variant="header">Instrument-Assisted Mechanical Spine Adjustments</Typography>
-            <Typography variant="body">Instrument-assisted mechanical spine adjustments offer a gentle, wellness-centered approach
-                to supporting spinal health and overall balance in the body. Using a specialized handheld instrument, precise and
-                controlled impulses are applied to areas of the spine that need support, encouraging proper movement and alignment 
-                without forceful twisting or cracking. <br/><br/>
-                his comfortable technique is designed to work with the body’s natural ability to heal and adapt. By improving joint
-                mobility and reducing areas of stress, instrument-assisted adjustments help support nervous system function, promote
-                relaxation, and enhance overall well-being. The light, consistent touch makes this approach ideal for individuals 
-                of all ages who are seeking a calm, effective, and restorative care experience.
+        <Box sx={{ backgroundColor: "var(--light-green)", p: 3, mb: 5}}>
+            <Typography id="nsa" variant="header">Network Spinal Analysis (NSA) Treatment</Typography>
+            <Typography variant="body">Network Spinal Analysis (NSA) is a gentle, non-invasive approach that helps
+                your body release tension and stress while supporting overall spinal and nervous system health. Using precise, 
+                light touch along the spine, NSA promotes relaxation, improves energy flow, and enhances your body’s ability to adapt to stress.
+                <br/><br/>This technique is safe and effective for anyone—from babies to seniors—and everyone in between.
             </Typography>
-            <Typography variant="body" sx={{ pt: 3,}}><strong>Benefits Include:</strong><br/><br/>
+            <Typography variant="body" sx={{ pt: 3,}}><strong>Benefits of NSA Include:</strong><br/><br/>
                 <ul>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Gentle support for spinal alignment</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Improved mobility and flexibility</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Reduced physical stress and tension</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Enhanced comfort and relaxation</li>
-                    <li><ArrowCircleRightIcon fontSize="xsmall"/> A safe, low-force option for ongoing wellness care</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Chronic pain relief</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Improved posture and spinal alignment</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Enhanced athletic performance</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Better sleep quality</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Increased energy levels</li>
+                    <li><ArrowCircleRightIcon fontSize="xsmall"/> Stress reduction and emotional well-being</li>
                 </ul>
             </Typography>
         </Box>

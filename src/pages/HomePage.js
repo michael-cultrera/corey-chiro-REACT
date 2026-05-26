@@ -55,7 +55,7 @@ export default function Home() {
             <Grid container spacing={2} sx={{ mb: 3 }}>
               {[
                 { title: "Our Services", icon: "/images/services.jpg", nav: "/services" },
-                { title: "New Patients", icon: "/images/new_patients.jpg", nav: "/patient-forms" },
+                { title: "New Patients", icon: "/images/new_patients.jpg", nav: "/book-appointment" },
                 { title: "Contact Us", icon: "/images/contact.jpg", nav: "/contact-us" },
               ].map((item) => (
                 <Grid item xs={12} sm={4} key={item.title}>
@@ -153,7 +153,7 @@ export default function Home() {
                     borderRadius: "30px",
                     fontSize: 14,
                     fontWeight: 500,
-                    bgcolor: "#3B7597",
+                    bgcolor: "#4b96c1",
                     color: "#F7FAFA"
                   }}
                 >
