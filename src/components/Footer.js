@@ -53,11 +53,11 @@ function Footer() {
                         <Typography variant="body">Sunday</Typography>
                     </Box>
                     <Box sx={{ whiteSpace: 'nowrap'}}>
+                        <Typography variant="body" sx={{ pb: 1 }}>12-6pm</Typography>
+                        <Typography variant="body" sx={{ pb: 1 }}>9:45-4pm</Typography>
                         <Typography variant="body" sx={{ pb: 1 }}>Closed</Typography>
                         <Typography variant="body" sx={{ pb: 1 }}>9:45-6pm</Typography>
-                        <Typography variant="body" sx={{ pb: 1 }}>Closed</Typography>
-                        <Typography variant="body" sx={{ pb: 1 }}>9:45-6pm</Typography>
-                        <Typography variant="body" sx={{ pb: 1 }}>9:45-3pm</Typography>
+                        <Typography variant="body" sx={{ pb: 1 }}>9:45-4pm</Typography>
                         <Typography variant="body" sx={{ pb: 1}}>9:30-3pm</Typography>
                         <Typography variant="body">Closed</Typography>
                     </Box>

@@ -26,10 +26,27 @@ export default function ContactUs() {
         >
           <Box sx={{ pb: { xs: 4, md: 0 } }}>
             <Typography variant="header">Hours of Operation</Typography>
-            <Typography variant="body" sx={{ pb: 1 }}>Monday - Friday: 9:00 AM - 5:00 PM</Typography>
-            <Typography variant="body" sx={{ pb: 1 }}>Saturday: 9:00 AM - 1:00 PM</Typography>
-            <Typography variant="body">Sunday: Closed</Typography>
+            <Box sx={{ display: 'flex', gap: 3, width: "180px"}}>
+              <Box>
+                  <Typography variant="body" sx={{ pb: 1 }}>Monday:</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>Tuesday:</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>Wednesday:</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>Thursday:</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>Friday:</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>Saturday:</Typography>
+                  <Typography variant="body">Sunday</Typography>
+              </Box>
+              <Box sx={{ whiteSpace: 'nowrap'}}>
+                  <Typography variant="body" sx={{ pb: 1 }}>12:00 PM - 6:00 PM</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>9:45 AM - 4:00 PM</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>Closed</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>9:45 AM - 6:00 PM</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>9:45 AM - 4:00 PM</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>9:30 AM - 3:00 PM</Typography>
+                  <Typography variant="body">Closed</Typography>
+              </Box>
           </Box>
+        </Box>
           <Box sx={{ pb: { xs: 4, md: 0 } }}>
             <Typography variant="header">Contact Info</Typography>
             <Typography variant="body" sx={{ pb: 1 }}>

@@ -73,33 +73,33 @@ export default function BookAppointment() {
               <TableBody>
                   <TableRow>
                     <TableCell scope="row">
-                      <Typography variant="body">Initial Exam:</Typography>
+                      <Typography variant="body">Initial Examination:</Typography>
                     </TableCell>
-                    <TableCell align="right"><Typography variant="body">$100</Typography></TableCell>
+                    <TableCell align="right"><Typography variant="body">$110</Typography></TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell scope="row">
                       <Typography variant="body">Adult Subsequent Visit:</Typography>
                     </TableCell>
-                    <TableCell align="right"><Typography variant="body">$50</Typography></TableCell>
+                    <TableCell align="right"><Typography variant="body">$55</Typography></TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell scope="row">
-                      <Typography variant="body">Extended Visit (30 mins):</Typography>
+                      <Typography variant="body">Kids Initial Exam (12 and Under):</Typography>
                     </TableCell>
-                    <TableCell align="right"><Typography variant="body">Subsequent visit + $20 (E.g. Adult: $70)</Typography></TableCell>
+                    <TableCell align="right"><Typography variant="body">$80</Typography></TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell scope="row">
-                      <Typography variant="body">Student Subsequent Visit:</Typography>
+                      <Typography variant="body">Kids Subsequent Visit:</Typography>
                     </TableCell>
-                    <TableCell align="right"><Typography variant="body">$40</Typography></TableCell>
+                    <TableCell align="right"><Typography variant="body">$45</Typography></TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell scope="row">
-                      <Typography variant="body">Kids (12 and under):</Typography>
+                      <Typography variant="body">Extended Subsequent Visit:</Typography>
                     </TableCell>
-                    <TableCell align="right"><Typography variant="body">$35</Typography></TableCell>
+                    <TableCell align="right"><Typography variant="body">$75</Typography></TableCell>
                   </TableRow>
               </TableBody>
             </Table>
