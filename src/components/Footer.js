@@ -30,7 +30,7 @@ function Footer() {
                     />
                 </Box>
                 <Link
-                    href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2N2"
+                    href="https://maps.google.com/maps?q=2942+Finch+Ave+E+unit+117+2nd+floor,+Toronto,+ON+M1W+2T4"
                     sx={{
                         color: "var(--foreground-color)",
                         textDecoration: "none",
@@ -40,7 +40,7 @@ function Footer() {
                         },
                     }}
                     >
-                    <Typography variant="body" sx={{pb: 3, pt: 1,}}>2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2N2</Typography>
+                    <Typography variant="body" sx={{pb: 3, pt: 1,}}>2942 Finch Ave E unit 117 2nd floor, Toronto, ON M1W 2T4</Typography>
                 </Link>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', width: "180px"}}>
                     <Box>
