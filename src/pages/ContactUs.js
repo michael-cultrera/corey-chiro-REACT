@@ -37,7 +37,7 @@ export default function ContactUs() {
                   <Typography variant="body">Sunday</Typography>
               </Box>
               <Box sx={{ whiteSpace: 'nowrap'}}>
-                  <Typography variant="body" sx={{ pb: 1 }}>12:00 PM - 6:00 PM</Typography>
+                  <Typography variant="body" sx={{ pb: 1 }}>Closed</Typography>
                   <Typography variant="body" sx={{ pb: 1 }}>9:45 AM - 4:00 PM</Typography>
                   <Typography variant="body" sx={{ pb: 1 }}>Closed</Typography>
                   <Typography variant="body" sx={{ pb: 1 }}>9:45 AM - 6:00 PM</Typography>
